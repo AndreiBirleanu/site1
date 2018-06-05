@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Monarhia constituțională în Romania</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+	
+	
+	
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<style>
+
+
+.hovereffect {
+width:100%;
+height:100%;
+float:left;
+overflow:hidden;
+position:relative;
+text-align:center;
+cursor:default;
+}
+
+.hovereffect .overlay {
+width:100%;
+height:100%;
+position:absolute;
+overflow:hidden;
+top:0;
+left:0;
+opacity:0;
+background-color:rgba(0,0,0,0.5);
+-webkit-transition:all .4s ease-in-out;
+transition:all .4s ease-in-out
+}
+
+.hovereffect img {
+display:block;
+position:relative;
+-webkit-transition:all .4s linear;
+transition:all .4s linear;
+}
+
+.hovereffect h2 {
+text-transform:uppercase;
+color:#fff;
+text-align:center;
+position:relative;
+font-size:17px;
+background:rgba(0,0,0,0.6);
+-webkit-transform:translatey(-100px);
+-ms-transform:translatey(-100px);
+transform:translatey(-100px);
+-webkit-transition:all .2s ease-in-out;
+transition:all .2s ease-in-out;
+padding:10px;
+}
+
+.hovereffect a.info {
+text-decoration:none;
+display:inline-block;
+text-transform:uppercase;
+color:#fff;
+border:1px solid #fff;
+background-color:transparent;
+opacity:0;
+filter:alpha(opacity=0);
+-webkit-transition:all .2s ease-in-out;
+transition:all .2s ease-in-out;
+margin:50px 0 0;
+padding:7px 14px;
+}
+
+.hovereffect a.info:hover {
+box-shadow:0 0 5px #fff;
+}
+
+.hovereffect:hover img {
+-ms-transform:scale(1.2);
+-webkit-transform:scale(1.2);
+transform:scale(1.2);
+}
+
+.hovereffect:hover .overlay {
+opacity:1;
+filter:alpha(opacity=100);
+}
+
+.hovereffect:hover h2,.hovereffect:hover a.info {
+opacity:1;
+filter:alpha(opacity=100);
+-ms-transform:translatey(0);
+-webkit-transform:translatey(0);
+transform:translatey(0);
+}
+
+.hovereffect:hover a.info {
+-webkit-transition-delay:.2s;
+transition-delay:.2s;
+}
+
+
+
+#thumbnail-slider {
+    margin:0 auto; /*center-aligned*/
+    width:100%;
+    max-width:800px;
+    padding:0;
+    box-sizing:border-box;
+    position:relative;
+    -webkit-user-select: none;
+    user-select:none;
+}
+
+#thumbnail-slider div.inner {    
+    /*the followings should not be changed */
+    position:relative;
+    overflow:hidden;
+    padding:0;
+    margin:0;
+}
+ 
+#thumbnail-slider div.inner ul {    
+    /*the followings should not be changed */
+    white-space:nowrap;
+    position:relative;
+    left:0; top:0;
+    list-style:none;
+    font-size:0;
+    padding:0;
+    margin:0;
+    float:left!important;
+    width:auto!important;
+    height:auto!important;
+}
+
+#thumbnail-slider ul li {
+    display:inline-block;
+    margin-top:20px;
+    margin-bottom:90px;
+    margin-left:-30px; margin-right:-30px; /* Spacing between thumbs*/
+    -webkit-transform:scale(0.9);
+    transform:scale(0.9); /*Note: The scale down will increase the spacing between slides. You can set negative margins as did above to roll back the spacing. */
+    -webkit-transition:-webkit-transform 0.5s;
+    transition:transform 1.5s;
+    box-sizing:content-box;
+    text-align:center;
+    vertical-align:middle;
+    padding:0;
+    position:relative;
+    list-style:none;
+    backface-visibility:hidden;
+    
+    /*-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);*/
+    
+}
+
+#thumbnail-slider ul li.active {
+    -webkit-transform:scale(1.15); 
+    transform:scale(1.15); /*Note: if scale is greater than 1, the margin-top and margin-bottom in the selector "#thumbnail-slider li" must be set with a sufficient value so the enlarged image will be shown within the margins.*/
+    background-color:transparent;
+    
+	/*-webkit-filter: initial;
+	filter: initial;*/
+}
+
+#thumbnail-slider .thumb {
+    width:100%;
+    height: 100%;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center center;
+    display:block;
+    position:absolute;
+    font-size:0;
+    cursor:inherit;
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(255,255,255,0.4)));
+    transition:all linear 0.4s;
+}
+
+.hide-bullets {
+    list-style:none;
+    margin-left: -40px;
+    margin-top:20px;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    width: 100%;
+}
+
+
+
+
+</style>
+
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar" data-offset="60" background="img/bg1.png">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a style="padding-top:2px;" class="navbar-brand page-scroll" href="#page-top"><img style ="width:40px;" src="img/1.png"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="page-scroll" href="#istoric">GENERALITĂŢI</a></li>
+        <li><a class="page-scroll" href="#despre">DESPRE</a></li>
+        <li><a class="page-scroll" href="#regi">REGI</a></li>
+        <li><a class="page-scroll" href="#galerie">GALERIE</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+	
+	
+	<br>
+	<br>
+	<br>
+	
+	
+<section id="intro" >
+<hr>
+<center><h1 style="font-family:Monotype Corsiva;font-size:50px;">Monarhia constituţională în România</h1></center>
+<hr>
+<br>
+<div class="container" style="-webkit-box-shadow: -13px 23px 89px -24px rgba(0,0,0,0.88);
+-moz-box-shadow: -13px 23px 89px -24px rgba(0,0,0,0.88);
+box-shadow: -13px 23px 89px -24px rgba(0,0,0,0.88);" >
+        <div id="main_area">
+                <!-- Slider -->
+                <div class="row">
+                    <div class="col-xs-12" id="slider">
+                        <!-- Top part of the slider -->
+                        <div class="row" >
+                            <div class="col-sm-8" id="carousel-bounding-box">
+                                <div class="carousel slide" id="myCarousel">
+                                    <!-- Carousel items -->
+                                    <div class="carousel-inner" >
+                                        <div class="active item" data-slide-number="0">
+                                        <img src="img/carol1bg.jpg" style="height:350px;"></div>
+
+                                        <div class="item" data-slide-number="1">
+                                        <img src="img/ferdinandbg.jpg" style="height:350px;"></div>
+
+                                        <div class="item" data-slide-number="2">
+                                        <img src="img/carol2bg.jpg" style="height:350px;"></div>
+
+                                        <div class="item" data-slide-number="3">
+                                        <img src="img/mihaibg.jpg" style="height:350px;"></div>
+
+                                        
+                                    </div><!-- Carousel nav -->
+                                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>                                       
+                                    </a>
+                                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>                                       
+                                    </a>                                
+                                    </div>
+                            </div>
+							
+                            <div class="col-sm-4" id="carousel-text" style="background-color:lightblue;opacity:0.5;"></div>
+
+                            <div id="slide-content" style="display: none;" style="padding-left:5%;">
+                                <div id="slide-content-0">
+                                    <center><h2 style="font-family:Edwardian Script ITC;font-size:40px;">Carol I</h2></center>
+                                    <center><p style="font-family:Monotype Corsiva;font-size:17px;"><span style="padding-left:1em;">Carol</span> I (1839 – 1914), rege al României, principe de Hohenzollern-Sigmaringen, pe numele sau complet Karl Eitel Friedrich Zephyrinus Ludwig von Hohenzollern-Sigmaringen  a fost domnitorul, apoi regele Romaniei, care a condus Principatele Romane si apoi România dupa abdicarea forțata de o lovitura de stat a lui Alexandru Ioan Cuza. Din 1867 a devenit membru de onoare al Academiei Romane, iar între 1879 si 1914 a fost protector si presedinte de onoare al aceleiasi instituții.  </p>
+                                    <p class="sub-text"><a href="carol1.html">Citeste mai mult...</a></p></center>
+                                </div>
+
+								
+                                <div id="slide-content-1">
+                                    <center><h2 style="font-family:Edwardian Script ITC;font-size:40px;">Ferdinand I</h2>
+                                    <p style="font-family:Monotype Corsiva;font-size:17px;"><span style="padding-left:1em;">Ferdinand</span> I a devenit Rege la moartea unchiului Sau, Carol I (1865 – 1927) si a ramas in istorie ca Ferdinand intregitorul sau Ferdinand cel Loial, regele Romaniei Mari, care a trecut peste originea sa germana, pentru a urma vointa de unitate a poporului Sau, in timpul Primului Razboi Mondial.
+
+În timpul Domniei Lui s-a trecut la sufragiul universal, s-a infaptuit reforma agrara din 1921 si a fost adoptata Constitutia moderna din 1923, care a oferit cadrul dezvoltarii Romaniei Mari.  </p>
+                                    <p class="sub-text"><a href="ferdinand.html">Citeste mai mult...</a></p></center>
+                                </div>
+								
+                                <div id="slide-content-2">
+                                    <center><h2 style="font-family:Edwardian Script ITC;font-size:40px;">Carol II</h2>
+                                    <p></p>
+                                     <p class="sub-text" style="font-family:Monotype Corsiva;font-size:17px;"><span style="padding-left:1em;">Principele</span> Carol s-a nascut la Sinaia, la 3 octombrie 1893. A fost fiul Regelui Ferdinand si al Reginei Maria. Primul Rege nascut in Romania a avut o domnie plina de impliniri, dar si de convulsii. Decada 1930-1940, cea a domniei Regelui Carol al II-lea, este in acelasi timp o epoca de prosperitate economica si de inflorire culturala, dar si epoca de ascensiune a extremismului de dreapta. Carol al II-lea este Regele care combate in mod brutal Miscarea Legionara.
+									 </p><p><a href="carol2.html">Citeste mai mult...</a></p></center>
+                                </div>
+
+
+                                <div id="slide-content-3">
+                                    <center><h2 style="font-family:Edwardian Script ITC;font-size:40px;">Mihai I</h2>
+                                    <p style="font-family:Monotype Corsiva;font-size:17px;"><span style="padding-left:1em;">Majestatea Sa Regele Mihai I al Romaniei s-a nascut la 25 octombrie 1921, la Sinaia. Este fiul legitim al Regelui Carol al II-lea si al Reginei-mama Elena.
+
+Prima domnie a MS Regelui Mihai I a inceput in 1927, dupa moartea bunicului Sau, Regele Ferdinand I. Regele-copil a fost tutelat de o Regenta condusa de unchiul Sau, Principele Nicolae al Romaniei.
+
+Dupa venirea pe Tron a Regelui Carol al II-lea, in iunie 1930 si dupa plecarea Reginei-mama in exil, Regele Mihai a ramas in grija tatalui Sau. </p>
+                                    <p class="sub-text"><a href="mihai.html">Citeste mai mult...</a></p></center>
+                                </div>
+
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/Slider-->
+
+                <div class="row hidden-xs" id="slider-thumbs">
+                        <!-- Bottom switcher of slider -->
+                        <ul class="hide-bullets">
+                            <li class="col-sm-2">
+                                <a class="thumbnail" id="carousel-selector-0"><img src="img/carol1bg.jpg" style="height:100px;"></a>
+                            </li>
+
+                            <li class="col-sm-2">
+                                <a class="thumbnail" id="carousel-selector-1"><img src="img/ferdinandbg.jpg" style="height:100px;"></a>
+                            </li>
+
+                            <li class="col-sm-2">
+                                <a class="thumbnail" id="carousel-selector-2"><img src="img/carol2bg.jpg" style="height:100px;"></a>
+                            </li>
+
+                            <li class="col-sm-2">
+                                <a class="thumbnail" id="carousel-selector-3"><img src="img/mihaibg.jpg" style="height:100px;"></a>
+                            </li>
+
+                           
+                        </ul>                 
+                </div>
+        </div>
+</div>
+<br>
+
+<hr>
+ 
+	<center><a class="btn btn-default btn-lg page-scroll" role="button" href="#istoric">Derulează</a><center>
+           
+</section>
+<br>
+<br>
+	
+	
+ <section id="istoric" class="istoric">
+ 
+     <h2 style="margin-top:0em; font-family:Monotype Corsiva;font-size:36px;"><center><p>Generalităţi</p></center></h2>
+	 <hr>
+	 
+				<br>
+				
+
+          <div class="row">
+
+              <div class="col-lg-4" style="padding-right:3em; padding-left:5em;">
+                
+				<br>
+
+				<p style="font-family:Monotype Corsiva;font-size:18px;"><span style="padding-left:1em;">Romania</span> alegea monarhia constitutionala, la 10 mai 1866, proclamandu-L pe Carol I ca Domn si Print al tarii. Sub conducerea Lui, Romania si-a castigat la 1878 independenta de stat, proclamandu-se Regat la 26 martie 1881. Au urmat 66 de ani in care a fost construit statul roman modern, in care s-au dezvoltat institutiile politice si infrastructura economica si in care Romania si-a castigat, prin propriile puteri, locul meritat in familia natiunilor Europei.</p>
+											                             
+                 <p  style="font-family:Monotype Corsiva;font-size:18px;"><span style="padding-left:1em;">Cei</span> patru Regi, Carol I, Ferdinand I, Carol al II-lea si Mihai I, si cele patru Regine, Elisabeta, Maria, Elena si Ana sunt fiecare simbolul unei etape din istoria Romaniei. Independenta si modernizarea tarii, Marea Unire, inflorirea economica si culturala din perioada interbelica si restaurarea democratiei, fie ca s-a petrecut intre 23 august 1944 si abolirea monarhiei (1947) sau incepand din 1990, pot fi legate fiecare de persoana unui monarh.</p>
+        
+          </div>
+
+		      
+		  
+		  <div class="col-lg-8" style="padding-right:3em; padding-top:1em;">
+							<img class="img-responsive" src="img/regi.gif" alt="" style=" -webkit-box-shadow: -11px 9px 53px -10px rgba(0,0,0,0.88);
+-moz-box-shadow: -11px 9px 53px -10px rgba(0,0,0,0.88);
+box-shadow: -11px 9px 53px -10px rgba(0,0,0,0.88);width:750px; height:550px;">
+						 </div>
+		  
+        
+	
+				
+          </div>
+
+				
+				
+				<br>
+				<br>
+				
+				
+				<hr>
+            <div class="row">
+              <div class="col-lg-12" style="padding-bot:5em;text-align:center;">
+			  <br>
+                 <a class="btn btn-default page-scroll" href="#despre" ><img class="img-responsive" src="img/down.png" alt="" style="height:20px;"></a>
+				 
+              </div>
+          </div>
+		  
+		  
+           
+        </div>
+		
+    </section>
+
+	<br>
+	<br>
+	
+ <section id="despre" class="despre">
+ 
+     
+            <div class="row" >
+                <div class="col-lg-12" >
+					
+                    <center><h1 style="font-family:Monotype Corsiva;font-size:36px;">Despre</h1></center>
+					<hr style="width:350px;">
+						<div class="containter" >
+											<center><h1><small class="subtitle" style="font-family:Monotype Corsiva;font-size:24px;" >Ce reprezinta o monarhie?</small></h1></center>
+											<br>
+										<div class="jumbotron" style="-webkit-box-shadow: -13px 23px 89px -24px rgba(0,0,0,0.88);
+-moz-box-shadow: -13px 23px 89px -24px rgba(0,0,0,0.88);
+box-shadow: -13px 23px 89px -24px rgba(0,0,0,0.88);">
+											<p style="font-family:Monotype Corsiva;font-size:22px;" ><span style="padding-left:2em;" >O</span> monarhie constituțională este o formă de guvernământ monarhică ce face parte dintr-un sistem constituțional care acceptă un monarh ereditar sau ales în funcție de șef de stat. Monarhiile constituționale moderne, de obicei implementează conceptul de trias politica, sau "separarea puterilor", unde monarhul e capul ramurei legislative sau doar are un rol simbolic. În cazul în care monarhul deține puterea absolută, aceasta se numește o monarhie absolută.
+										</div>	
+										
+										<br>
+										
+										<div class="jumbotron" style="-webkit-box-shadow: -13px 23px 89px -28px rgba(0,0,0,0.88);
+-moz-box-shadow: -13px 23px 89px -28px rgba(0,0,0,0.88);
+box-shadow: -13px 23px 89px -28px rgba(0,0,0,0.88);">
+											<p style="font-family:Monotype Corsiva;font-size:22px;" ><span style="padding-left:2em;">Astăzi</span> monarhiile constituționale sunt combinate cu o democrație reprezentativă, ce reprezintă teoriile suveranității populare care plasează suveranitatea în mâinele poporului, și cele care consideră important rolul tradiției în guvernământ. Cu toate că regele sau regina pot fi considerați șeful statului, prim Ministrul, a cărui putere provine direct sau indirect în urma alegerilor, este Șeful guvernului.</p>
+										</div>
+											
+						</div>				
+									
+                </div>
+            </div>
+			
+			<br>
+			<br>
+		
+			
+			
+			<div class="row">
+			
+              <div class="col-lg-12" style="padding-bot:5em;text-align:center;">
+				<a class="btn btn-default page-scroll" href="#istoric"><img class="img-responsive" src="img/up.png" alt="" style="height:20px;"></a>
+                <a class="btn btn-default page-scroll" href="#about2" >Află mai multe!</a>
+				<a class="btn btn-default page-scroll" href="#regi"><img class="img-responsive" src="img/down.png" alt="" style="height:20px;"></a>
+              </div>
+          </div>
+          			
+			
+        </div>
+
+    </section>
+	
+	<br>
+	<br>
+ <section id="about2" class="monarhie">
+      <center><h1 style="font-family:Monotype Corsiva;font-size:36px;">Monarhia constituţională în România</h1></center>
+	 <hr style="width:650px;">
+	  <br>
+        
+            <div class="row">
+                <div class="col-lg-12">
+						<div class="jumbotron" style="padding-left:10px; padding-right:10px; -webkit-box-shadow: -13px 23px 89px -28px rgba(0,0,0,0.88);
+-moz-box-shadow: -13px 23px 89px -28px rgba(0,0,0,0.88);
+box-shadow: -13px 23px 89px -28px rgba(0,0,0,0.88);">
+											<p style="font-family:Monotype Corsiva;font-size:20px;" ><span style="padding-left:2em;">Monarhia</span> constituțională a fost forma de guvernământ a României între 1881 și 1947. În acest interval de timp, țara a fost condusă de patru suverani din familia de Hohenzollern-Sigmaringen. Monarhia a fost abolită la 30 decembrie 1947, în contextul comunizării țării de către Uniunea Sovietică.
+										</div>	
+										
+						<div class="jumbotron" style="padding-left:10px; padding-right:10px; -webkit-box-shadow: -13px 23px 89px -28px rgba(0,0,0,0.88);
+-moz-box-shadow: -13px 23px 89px -28px rgba(0,0,0,0.88);
+box-shadow: -13px 23px 89px -28px rgba(0,0,0,0.88);">
+											<p style="font-family:Monotype Corsiva;font-size:20px;"><span style="padding-left:2em;">Pe</span> fondul instabilității interne care s-a instalat odată cu abdicarea forțată a domnitorului Alexandru Ioan Cuza, abdicare de care a fost responsabilă „monstruoasa coaliție”, a apărut ideea (mai veche de altfel) aducerii unui prinț străin. Sensul politic unei astfel de acțiuni era de a contracara poziția externă potrivnică formării statului român unitar, existentă în rândul imperiilor istorice vecine care erau obișnuite să domine spațiul românesc. Prin punerea în fruntea României a unui reprezentant din dinastiile recunoscute în Europa, se făcea pe placul unora dintre acești puternici potrivnici. Agitația internă a fost urmată și de una externă – unele puteri străine ridicau întrebarea dacă unirea celor două principate române ar mai putea fi recunoscută în continuare. Rusia chiar sprijinea zgomotos tendințele separatiste, organizând manifestații la Iași, la care a participat chiar mitropolitul Moldovei. În consecință, pentru a depăși cât mai repede aceste momente de nesiguranța politică statală, românii au urmat exemplul grecesc și au propus aducerea unui principe străin. În acest sens i s-au făcut propuneri prințului de Flandra, mezinul regelui Leopold I al Belgiei. Acesta însă a refuzat, neavând garanția marilor puteri, astfel că după mai multe discuții interpartinice, s-a hotărât aducerea în țară a prințului Carol de Hohenzollern-Sigmaringen. Astfel, marile puteri ar fi fost puse în fața faptului împlinit, iar unitatea națională ar fi fost păstrată. Totuși, din precauție, planul a fost păstrat secret, până ce noul domn a fost adus în țară, cu sprijinul Franței, simpatizantă a unui stat unitar român, după care a început procesul anevoios de recunoaștere internaționala a domniei lui Carol I.</span> 
+										</div>	
+										<br>
+
+                </div>
+				<div class="row">
+              <div class="col-lg-12" style="padding-bot:5em;text-align:center;">
+			  
+			     <a class="btn btn-default page-scroll" href="#despre" ><img class="img-responsive" src="img/up.png" alt="" style="height:20px;"></a>			  
+                 <a class="btn btn-default page-scroll" href="#regi" ><img class="img-responsive" src="img/down.png" alt="" style="height:20px;"></a>
+				
+              </div>
+          </div>
+            </div>
+        
+
+    </section>
+
+ 
+    
+
+	<br>
+	<br>
+ 
+	
+
+	<section id="regi" class="regi">
+       
+			<center><h1 style="font-family:Monotype Corsiva;font-size:36px;">Regi</h1></center>
+			 
+			<hr>
+				
+				<br>
+				<br>
+				<br>
+<br>
+				
+        <div class="row">
+          <div class="col-lg-3 ">
+            <div class="hovereffect">
+                <img class="img-responsive" src="img/carol.jpg" alt="" style="height:30em;">
+            <div class="overlay">
+                <h2>Regele Carol I</h2>
+                  <a class="info" href="carol1.html">Citeste mai mult</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 ">
+          <div class="hovereffect">
+              <img class="img-responsive" src="img/ferdinand.jpg" alt="" style="height:30em;">
+          <div class="overlay">
+              <h2>Regele Ferdinand</h2>
+			  <div>
+               <a class="info" href="ferdinand.html">Citeste mai mult</a>
+			   </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-3 ">
+        <div class="hovereffect">
+            <img class="img-responsive" src="img/carol2.jpg" alt="" style="height:30em;">
+        <div class="overlay">
+            <h2>Regele Carol al II-lea</h2>
+              <a class="info" href="carol2.html">Citeste mai mult</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 ">
+      <div class="hovereffect">
+          <img class="img-responsive" src="img/misu.jpg" alt="" style="height:30em;">
+      <div class="overlay">
+          <h2>Regele Mihai I</h2>
+            <a class="info" href="mihai.html">Citeste mai mult</a>
+      </div>
+    </div>
+	
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<br>
+
+<br>
+	 <div class="row" style="">
+              <div class="col-lg-12" style="padding-bot:5em;text-align:center;">
+                 
+				 <a class="btn btn-default page-scroll" href="#despre" ><img class="img-responsive" src="img/up.png" alt="" style="height:20px;"></a>
+				 <a class="btn btn-default page-scroll" href="#galerie" ><img class="img-responsive" src="img/down.png" alt="" style="height:20px;"></a>
+				 
+              </div>
+          </div>
+    </section>    
+	<br>
+	<br>
+	
+      
+
+
+	  
+<section id="galerie" class="galerie" style="background-color:white;">
+				
+	
+ <center><h1 style="font-family:Monotype Corsiva;font-size:36px;">Galerie </h1></center>
+
+ <hr>
+	<br>
+	<br>
+
+<div class="container">
+    <div id="main_area">
+        <!-- Slider -->
+        <div class="row">
+            <div class="col-sm-6" id="slider-thumbs">
+                <!-- Bottom switcher of slider -->
+                <ul class="hide-bullets">
+                    <li class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-0">
+                            <img style="height:100px;width:100%;" src="img/carool.jpg">
+                        </a>
+                    </li>
+
+                    <li class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-1"><img style="height:100px;width:100%;"src="img/carol13.jpg"></a>
+                    </li>
+
+					
+					  <li class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-2"><img style="height:100px;width:100%;"src="img/galerie1.jpg"></a>
+                    </li>
+					
+                    <li class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-3"><img style="height:100px;width:100%;"src="img/galerie2.jpg"></a>
+                    </li>
+                  
+                    <li class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-4"><img style="height:100px;width:100%;"src="img/ferdinand.jpg"></a>
+                    </li>
+
+                    <li class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-5"><img style="height:100px;width:100%;"src="img/galerie6.png"></a>
+                    </li>
+                    <li class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-6"><img style="height:100px;width:100%;"src="img/galerie7.png"></a>
+                    </li>
+
+                    <li class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-7"><img style="height:100px;width:100%;"src="img/galerie8.jpg"></a>
+                    </li>
+
+                    <li class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-8"><img style="height:100px;width:100%;"src="img/galerie3.png"></a>
+                    </li>
+
+                    <li class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-9"><img style="height:100px;width:100%;"src="img/galerie4.png"></a>
+                    </li>
+                    <li class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-10"><img style="height:100px;width:100%;"src="img/galerie5.jpg"></a>
+                    </li>
+
+                    <li class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-11"><img style="height:100px;width:100%;"src="img/carol2bg1.jpg"></a>
+                    </li>
+
+                    <li class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-12"><img style="height:100px;width:100%;"src="img/2.jpg"></a>
+                    </li>
+
+                    <li class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-13"><img style="height:100px;width:100%;"src="img/misu.jpg"></a>
+                    </li>
+                    <li class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-14"><img style="height:100px;width:100%;"src="img/mihai.jpg"></a>
+                    </li>
+
+                    <li class="col-sm-3">
+                        <a class="thumbnail" id="carousel-selector-15"><img style="height:100px;width:100%;"src="img/galerie9.png"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-6">
+                <div class="col-xs-12" id="slider">
+                    <!-- Top part of the slider -->
+                    <div class="row">
+                        <div class="col-sm-12" id="carousel-bounding-box">
+                            <div class="carousel slide" id="myCarousel2">
+                                <!-- Carousel items -->
+                                <div class="carousel-inner">
+                                    <div class="active item" data-slide-number="0">
+                                        <img style="height:535px;"src="img/carool.jpg">
+										<div class="carousel-caption">
+            <h2 style="font-family:Calvin;"><b>Regele Carol I</b></h2>
+          </div></div>
+
+                                    <div class="item data-slide-number="1">
+                                        <img style="height:535px;" src="img/carol13.jpg">
+										<div class="carousel-caption">
+            <h2 style="font-family:Calvin;"><b>Regele Carol I</b></h2>
+          </div></div>                             
+
+                                    <div class="item" data-slide-number="2">
+                                         <img style="height:535px;"src="img/galerie1.jpg">
+										 <div class="carousel-caption">
+            <h2 style="font-family:Calvin;"><b>Regele Carol I</b></h2>
+          </div></div>
+										 
+									<div class="item" data-slide-number="3">
+                                        <img style="height:535px;" src="img/galerie2.jpg">
+										<div class="carousel-caption">
+            <h2 style="font-family:Calvin;"><b>Regele Carol I</b></h2>
+          </div></div>
+
+                                    <div class="item" data-slide-number="4">
+                                         <img style="height:535px;"src="img/ferdinand.jpg">
+										 <div class="carousel-caption">
+            <h2 style="font-family:Calvin;"><b>Regele Ferdinand I</b></h2>
+          </div></div>
+
+                                    <div class="item" data-slide-number="5">
+                                        <img style="height:535px;"src="img/galerie6.png">
+										<div class="carousel-caption">
+           <h2 style="font-family:Calvin;"><b>Regele Ferdinand I</b></h2>
+          </div></div>
+                                    
+                                    <div class="item" data-slide-number="6">
+                                        <img style="height:535px;"src="img/galerie7.png">
+										<div class="carousel-caption">
+            <h2 style="font-family:Calvin;"><b>Regele Ferdinand I</b></h2>
+          </div></div>
+                                    
+                                    <div class="item" data-slide-number="7">
+                                        <img <img style="height:535px;width:100%;"src="img/galerie8.jpg">
+										<div class="carousel-caption">
+            <h2 style="font-family:Calvin;"><b>Regele Ferdinand I</b></h2>
+          </div></div>
+                                    
+                                    <div class="item" data-slide-number="8">
+                                        <img style="height:535px;width:100%;"src="img/galerie3.png">
+										<div class="carousel-caption">
+            <h2 style="font-family:Calvin;"><b>Regele Carol II</b></h2>
+          </div></div>
+                                    
+                                    <div class="item" data-slide-number="9">
+                                        <img style="height:535px;width:100%;"src="img/galerie4.png">
+										<div class="carousel-caption">
+            <h2 style="font-family:Calvin;"><b>Regele Carol II</b></h2>
+          </div></div>
+                                    
+                                    <div class="item" data-slide-number="10">
+                                         <img style="height:535px;width:100%;"src="img/galerie5.jpg"> 
+										 <div class="carousel-caption">
+            <h2 style="font-family:Calvin;"><b>Regele Carol II</b></h2>
+          </div></div>
+                                    
+                                    <div class="item" data-slide-number="11">
+                                         <img style="height:535px;width:100%;"src="img/carol2bg1.jpg">
+										 <div class="carousel-caption">
+            <h2 style="font-family:Calvin;"><b>Regele Carol II</b></h2>
+          </div></div>
+                                    
+                                    <div class="item" data-slide-number="12">
+                                         <img style="height:535px;width:100%;"src="img/1.jpg">
+										 <div class="carousel-caption">
+            <h1 style="font-family:Calvin;"><b>Regele Mihai I</b></h1>
+          </div></div>
+
+                                    <div class="item" data-slide-number="13">
+                                         <img style="height:535px;width:100%;"src="img/misu.jpg">
+										 <div class="carousel-caption">
+            <h1 style="font-family:Calvin;"><b>Regele Mihai I</b></h1>
+          </div></div>
+
+                                    <div class="item" data-slide-number="14">
+                                        <img style="height:535px;width:100%;"src="img/mihai.jpg">
+										<div class="carousel-caption">
+            <h1 style="font-family:Calvin;"><b>Regele Mihai I</b></h1>
+          </div></div>
+
+                                    <div class="item" data-slide-number="15">
+                                        <img style="height:535px;width:100%;"src="img/galerie9.png">
+										<div class="carousel-caption">
+            <h1 style="font-family:Calvin;"><b>Regele Mihai I</b></h1>
+          </div></div>
+                                </div>
+                                <!-- Carousel nav -->
+                                <a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel2" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/Slider-->
+        </div>
+
+    </div>
+</div>
+<br>
+<br>
+<hr>
+<br>
+		<div class="row" style="">
+              <div class="col-lg-12" style="padding-bot:5em;text-align:center;">
+                 
+				 <a class="btn btn-default page-scroll" href="#regi" ><img class="img-responsive" src="img/up.png" alt="" style="height:20px;"></a>
+				 <a class="btn btn-default page-scroll" href="#contact" ><img class="img-responsive" src="img/down.png" alt="" style="height:20px;"></a>
+				 
+              </div>
+          </div>
+	
+	</section>
+	<br>
+	<br>
+	
+	
+							
+	<br>
+	 <!--<center><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" ><button class="btn btn-primary" style="font-size:30px;">Bibliografie</button>
+          
+        </a></center>
+      
+    
+    <div id="collapseTwo" class="panel-collapse collapse">
+      
+     <hr width="60%">
+       <center> rada
+		radarada</center>
+        <hr width="45%">
+     
+    </div> -->
+
+	<br>
+							
+							<div class="row">
+              <div class="col-lg-12" style="padding-bot:5em;text-align:center;">
+                 <a class="btn btn-default page-scroll" href="#page-top" >Înapoi sus</a>
+              </div>
+          </div>
+		  
+			
+     
+	
+	
+	
+	<section id="footer" class="footer">
+	
+	
+	
+	<hr>
+	<center><small>&copy; Site realizat de Bîrleanu Andrei-Cristian</small></center>
+	
+	<hr>
+	
+	</section>
+	
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+
+    <!-- Bootstrap Core JavaScript -->
+	<script>
+
+
+</script>
+
+    <script src="js/bootstrap.min.js"></script>
+		<script>
+function goBack() {
+    window.history.back();
+}
+
+  jQuery(document).ready(function($) {
+ 
+        $('#myCarousel').carousel({
+                interval: 5000
+        });
+ 
+        $('#carousel-text').html($('#slide-content-0').html());
+ 
+        //Handles the carousel thumbnails
+       $('[id^=carousel-selector-]').click( function(){
+            var id = this.id.substr(this.id.lastIndexOf("-") + 1);
+            var id = parseInt(id);
+            $('#myCarousel').carousel(id);
+        });
+ 
+ 
+        // When the carousel slides, auto update the text
+        $('#myCarousel').on('slid.bs.carousel', function (e) {
+                 var id = $('.item.active').data('slide-number');
+                $('#carousel-text').html($('#slide-content-'+id).html());
+        });
+});
+
+jQuery(document).ready(function($) {
+ 
+        $('#myCarousel2').carousel({
+                interval: 5000
+        });
+ 
+        $('#carousel-text').html($('#slide-content-0').html());
+ 
+        //Handles the carousel thumbnails
+       $('[id^=carousel-selector-]').click( function(){
+            var id = this.id.substr(this.id.lastIndexOf("-") + 1);
+            var id = parseInt(id);
+            $('#myCarousel2').carousel(id);
+        });
+ 
+ 
+        // When the carousel slides, auto update the text
+        $('#myCarousel2').on('slid.bs.carousel', function (e) {
+                 var id = $('.item.active').data('slide-number');
+                $('#carousel-text').html($('#slide-content-'+id).html());
+        });
+});
+
+</script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+
+</body>
+
+</html>

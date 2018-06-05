@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Regele Mihai I</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+	
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<style>
+/* Carousel */
+
+#quote-carousel {
+    padding: 0 10px 30px 10px;
+    margin-top: 30px;
+    /* Control buttons  */
+    /* Previous button  */
+    /* Next button  */
+    /* Changes the position of the indicators */
+    /* Changes the color of the indicators */
+}
+#quote-carousel .carousel-control {
+    background: none;
+    color: #CACACA;
+    font-size: 2.3em;
+    text-shadow: none;
+    margin-top: 30px;
+}
+#quote-carousel .carousel-control.left {
+    left: -60px;
+}
+#quote-carousel .carousel-control.right {
+    right: -60px;
+}
+#quote-carousel .carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: 0px;
+    margin-right: -19px;
+}
+#quote-carousel .carousel-indicators li {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+    border: 4px solid #CCC;
+    border-radius: 50px;
+    opacity: 0.4;
+    overflow: hidden;
+    transition: all 0.4s;
+	
+}
+#quote-carousel .carousel-indicators .active {
+    background: #333333;
+    width: 128px;
+    height: 128px;
+    border-radius: 100px;
+    border-color: #f33;
+    opacity: 1;
+    overflow: hidden;
+}
+.carousel-inner {
+    min-height: 300px;
+}
+.item blockquote {
+    border-left: none;
+    margin: 0;
+}
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+
+
+
+.list-group>li:hover{background-color:lightblue;};
+
+
+
+
+/* Makes images fully responsive */
+
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ------------------- Carousel Styling ------------------- */
+
+.carousel-inner {
+  border-radius: 15px;
+}
+
+.carousel-caption {
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  padding: 0 0 10px 25px;
+  color: #fff;
+  text-align: left;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 15;
+  margin: 0;
+  padding: 0 25px 25px 0;
+  text-align: right;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+}
+
+
+/* ------------------- Section Styling - Not needed for carousel styling ------------------- */
+
+.section-white {
+   padding: 10px 0;
+}
+
+.section-white {
+  background-color: #fff;
+  color: #555;
+}
+
+@media screen and (min-width: 768px) {
+
+  .section-white {
+     padding: 1.5em 0;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+
+  .container {
+    max-width: 930px;
+  }
+
+}
+
+
+
+
+
+
+
+
+/***
+Bootstrap Line Tabs by @keenthemes
+A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+Licensed under MIT
+***/
+
+.content {
+	padding: 30px;
+	background: #f1f3fa;
+}
+
+.margin-bottom-30 {
+	margin-bottom: 30px;
+}
+
+/* Portlet */
+.portlet {
+	background: #fff;
+	padding: 20px;
+}
+
+.portlet.portlet-gray {
+	background: #f7f7f7;
+}
+
+.portlet.portlet-bordered {
+	border: 1px solid #eee;
+}
+
+/* Portlet Title */
+.portlet-title {
+	padding: 0;
+  	min-height: 40px;
+  	border-bottom: 1px solid #eee;
+  	margin-bottom: 18px;
+}
+
+.caption {
+	float: left;
+	display: inline-block;
+	font-size: 18px;
+	line-height: 18px;
+}
+
+.caption.caption-green .caption-subject,
+.caption.caption-green i {
+	color: #4db3a2;
+	font-weight: 200;
+}
+
+.caption.caption-red .caption-subject,
+.caption.caption-red i {
+	color: #e26a6a;
+	font-weight: 200;
+}
+
+.caption.caption-purple .caption-subject,
+.caption.caption-purple i {
+	color: #8775a7;
+	font-weight: 400;
+}
+
+.caption i {
+	color: #777;
+	font-size: 15px;
+	font-weight: 300;
+	margin-top: 3px;
+}
+
+.caption-subject {
+	color: #666;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.caption-helper {
+	padding: 0;
+	margin: 0;
+	line-height: 13px;
+	color: #9eacb4;
+	font-size: 13px;
+	font-weight: 400;
+}
+
+/* Actions */
+.actions {
+	float: right;
+  	display: inline-block;
+}
+
+.actions a {
+	margin-left: 3px;
+}
+
+.actions .btn {
+	color: #666;
+	padding: 3px 9px;
+	font-size: 13px;
+  	line-height: 1.5;
+  	background-color: #fff;
+  	border-color: #ccc;
+  	border-radius: 50px;
+}
+
+.actions .btn i {
+	font-size: 12px;
+}
+
+.actions .btn:hover {
+	background: #f2f2f2;
+}
+
+/* Pagination */
+.pagination {
+	margin: -3px 0 0;
+	border-radius: 50px;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+	padding: 4px 10px;
+	font-size: 12px;
+	color: #8775a7;
+	background: #f7f7f7;
+}
+
+.pagination > li:hover > a,
+.pagination > li.active > a,
+.pagination > li.active:hover > a {
+	color: #fff;
+	background: #8775a7;
+	border-color: #8775a7;
+}
+
+/* Inputs */
+.inputs {
+	float: right;
+	display: inline-block;
+	padding: 4px 0;
+	margin-top: -10px;
+}
+
+.input-inline {
+	width: 240px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* Tab */
+.portlet-title > .nav-tabs {
+	background: none;
+	margin: 0;
+	float: right;
+	display: inline-block;
+	border: 0;
+}
+
+.portlet-title > .nav-tabs > li {
+	background: none;
+	margin: 0;
+	border: 0;
+}
+
+.portlet-title > .nav-tabs > li > a {
+	background: none;
+	border: 0;
+	padding: 2px 10px 13px;
+	color: #444;
+}
+
+.portlet-title > .nav-tabs > li.active,
+.portlet-title > .nav-tabs > li.active:hover {
+  	border-bottom: 4px solid #f3565d;
+  	position: relative;
+  }
+
+  .portlet-title > .nav-tabs > li:hover {
+  	border-bottom: 4px solid #f29b9f;
+  }
+
+.portlet-title > .nav-tabs > li.active > a,
+.portlet-title > .nav-tabs > li:hover > a {
+	color: #333;
+	background: #fff;
+	border: 0;
+}
+
+
+</style>
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar" data-offset="60" background="img/bg1.png">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a style="padding-top:2px;" class="navbar-brand page-scroll" href="#page-top"><img style ="width:40px;" src="img/1.png"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><a class="page-scroll" href="#about">DESPRE</a></li>
+		
+		<li><a class="page-scroll" href="#stiaica">ȘTIAȚI CĂ?</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+	
+	
+	<br>
+	<br>
+	<br>
+	
+	
+
+<!-------- don't use this html this only for margin top remove this ---------------------->
+ <section class="section-white" id="intro">
+
+<br><br><br>
+<center><h1 style="font-family:Monotype Corsiva;font-size:50px;"><hr>Regele Mihai I</h1>
+<hr>
+</center>
+
+<br>
+<br>
+
+ <div class="container">
+
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" style="-webkit-box-shadow: 10px 10px 25px 6px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 25px 6px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 25px 6px rgba(0,0,0,0.75);">
+        <div class="item active">
+          <img style="height:400px;" src="img/mihaibg.jpg" alt="...">
+          <div class="carousel-caption">
+            <h2>Mihai I</h2>
+          </div>
+        </div>
+        <div class="item">
+          <img style="height:400px; width:100%;"src="img/2.jpg" alt="...">
+          <div class="carousel-caption">
+            <h2>Mihai I</h2>
+          </div>
+        </div>
+        <div class="item">
+         <img style="height:400px; width:100%;"src="img/mihai.jpg" alt="...">
+          <div class="carousel-caption">
+            <h2>Mihai I</h2>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+
+  </div>
+  <br>
+  <br>
+  <hr>
+ 
+	<center><a class="btn btn-default btn-lg page-scroll" role="button" href="#about">Derulează</a><center>
+</section>
+    
+	<br>
+	<br>
+
+ <section id="about" class="despre1">
+     
+        
+		<div class="col-md-7">
+		<br>
+		<center><h1>Despre</h1></center>
+		<hr>
+		<br>
+		<br>
+		<br>
+		<br>
+				<!-- BEGIN Portlet PORTLET-->
+				<div class="portlet">
+					<div class="portlet-title">
+						<div class="caption caption-red">
+							<i class="glyphicon glyphicon-pushpin"></i>
+							
+						</div>
+						<ul class="nav nav-tabs">
+							<li >
+								<a href="#portlet_tab3" data-toggle="tab">
+								Date personale</a>
+							</li>
+							<li>
+								<a href="#portlet_tab2" data-toggle="tab">
+								Politică externă </a>
+							</li>
+							<li class="active">
+								<a href="#portlet_tab1" data-toggle="tab">
+								Politică internă</a>
+							</li>
+						</ul>
+					</div>
+					<div class="portlet-body">
+						<div class="tab-content">
+							<div class="tab-pane active" id="portlet_tab1">
+								<h4>Politică internă</h4>
+								<div class="list-group">
+								
+  <a  class="list-group-item">În perioada 14 septembrie1940-27 ianuarie 1941 a funcționat guvernul general Ion Antonescu pe durata Statului Naţional Legionar (proclamat la 14 septembrie 1940). Acesta a pus în aplicare decretul-lege pentru fixarea listei civile a Regelui Mihai I. </a>
+
+  <a  class="list-group-item">La 30 octombrie 1940 se dă publicităţii statutul de functionare a Curţii Regale iar la 8 noiembrie Regele Mihai I este desemnat preşedinte de onoare şi protector al . Academiei Române. </a>
+
+  <a  class="list-group-item">În perioada 21-23 ianuarie 1941 are loc rebeliunea organizată de Mişcarea Legionară urmată la 27 ianuarie de instalarea guvernului general Ion Antonescu expresie a domniei unui regim politic autoritar.</a><br>
+
+ <a  class="list-group-item">La 14 februarie se desfiinţează Statul Naţional Legionar. Regele Mihai I este învestit mareșal al armatei române la 10 mai 1941. </a>
+ 
+  <a  class="list-group-item">La 20 iunie 1944 se creează Blocul Naţional Democrat, alcătuit din Partidul Naţional-Tărănesc, Partidul Naţional Liberal, Partidul Social-Democrat Şi Partidul Comunist. </a>
+
+  <a  class="list-group-item"> La 23 august 1944 a fost organizată lovitura de stat al cărei principal artizan a fost Regele Mihai I duce la îndepărtarea regimului antonescian. Până la 4 noiembrie guvernarea a fost asigurată de cabinetul general Constantin Sănătescu. Este un guvern alcătuit în principal din militari, dar avînd în componenta sa şi exponenţi ai Blocului Naţional Democrat (PNI, PNL, PSD, PCR). Decretul-lege prin care se pun bazele juridice ale revenirii la monarhia constituţională</a><br>
+
+ <a  class="list-group-item">La 24 februarie 1945 are loc demonstratia din Capitală organizată de PCR în vederea răsturnării guvernului Nicolae Rădescu. Mai multi ofiţeri superiori şi generali îi trimit Regelui o telegramă prin care se desolidarizează de actiunea şi declaraţiile generalului Nicolae Rădescu.</a>
+ 
+  <a  class="list-group-item">La 6 martie 1945 se constituie guvernul dr Petru Groza. Dominat de comunişti, acest guvern susţine sovietizarea României, cu sprijinul trupelor de ocupaţie. Regele Mihai I este decorat cu ordinul Victoria al URSS, în chip de recunoaştere a contributiei sale la victoria finală asupra Germaniei. </a>
+
+  <a  class="list-group-item">La refuzul guvernului dr Petru Groza de a-şi da demisia, Regele Mihai I declanşează « greva regală » (refuză să mai semneze legile sau decretele prezentate spre sanctionare şi promulgare) începînd cu 21 august 1945. Acţiunea sa durează pînă la 8 ianuarie 1946. La 8 noiembrie are loc marea manifestaţie a cetăţenilor Capitalei în spijinul Regelui Mihai I cu ocazia zilei sale onomastice. </a><br>
+
+ <a  class="list-group-item">La 13 iulie 1946 este adoptat decretul-lege pentru organizarea Reprezentanţei naţionale -aceasta se constituie într-un singur corp, Adunarea Deputaţilor iar la 15 iulie este promulgată legea electorală prin care se extinde dreptul de Vot universal la militari, funcţionari de stat şi femei. </a>
+ 
+  <a  class="list-group-item">La 19 noiembrie 1946 au loc alegerile parlamentare. Rezultatul lor este falsificat în mod grosolan de comunişti.</a>
+
+  <a  class="list-group-item"> La 29 iulie 1947 printr-un jurnal al Consiliului de Miniştri, Partidul Naţional-Tărănesc este dizolvat iar la 6 noiembrie gruparea Gh. Tătărăscu este înlăturată din guvern.</a>
+  <a  class="list-group-item">La 30 decembrie 1947 are loc abdicarea silită a Regelui Mihail. </a>
+
+</div>
+							</div>
+							<div class="tab-pane" id="portlet_tab2">
+								<h4>Politică externă</h4>
+								<div class="list-group">
+  <a  class="list-group-item">La 12 octombrie 1866 Carol I primeşte firmanul de numire din partea sultanului.</a>
+  <a  class="list-group-item">La 2 aprilie 1877 Domnul Carol I îşi dă acordul pentru convocarea Consiliului de Coroană, care să se pronunţe asupra politicii externe a ţării. Convenţia dintre România şi Rusia privind libera trecere a armatelor ruse pe teritoriul României a fost semnată la 4 aprilie 1877. Guvernul rus se obligă să respecte drepturile politice ale statului român,  precum şi a mentine si apăra integritatea actuală a României . </a>
+  <a  class="list-group-item">La 9 mai 1877 a fost proclamată independenţei României iar la 10 mai se  instituie definitiv ordinul Steaua României. Carol I, aflat la Calafat, ordonă la 15 mai deschiderea focului asupra trupelor otomane de la Vidin pentru ca la 16 august 1877 Domnului Carol I să i se încredinţeze comanda supremă a fortelor romano-ruse din zona Plevnei. </a><br>
+  <a  class="list-group-item">La 1 iulie 1878 se semnează tratatul de pace de la Berlin, în urma războiului ruso-româno-turc. La 9 septembrie 1878 Consiliul de Miniştri decide ca Domnul Carol I să poarte titlul de Alteţă Regală. </a>
+  <a  class="list-group-item">Din 14 februarie 1879 intră în vigoare legea prin care misiunile diplomatice ale României sînt ridicate la rangul de legaţii iar la 13 octombrie 1879 guvernul Ion C. Brătianu îşi propune ca obiectiv să se conformeze prevederilor tratatului de la Berlin şi să revizuiască articolul 7 din Constituţie. Legea de revizuire a articolului 7 din Constituţie consfinţeşte faptul că « diferenţa de credinţe religioase şi confesiuni nu constituie în România o piedică spre a dobindi drepturile civile şi politice şi a le exercita .</a>
+  <a  class="list-group-item">În perioada 15-18 septembrie 1896 are loc vizita lui Franz Joseph, împăratul Austro-Ungariei, în România. Vizita urmăreşte întărirea relatiilor cu România, relaţii afectate de reprimarea mişcării memorandiştilor.</a><br>
+ <a  class="list-group-item">În perioada 16-19 iulie 1898 are loc vizita Regelui Carol I în Rusia, marcînd o evoluţie pozitivă a relaţiilor dintre cele două tări.</a>
+  <a  class="list-group-item">Regele Carol I, însotit de principele moştenitor Ferdinand, întreprinde o vizită în Bulgaria în luna octombrie 1902 cu prilejul aniversării a douăzeci şi cinci de ani de la cucerirea Plevnei.</a>
+  <a  class="list-group-item">În perioada 26-29 noiembrie 1912 are loc vizita marelui duce Nicolae Mihailovici în România. Cu acest prilej, i se înmînează Regelui Carol I bastonul de feldmareşal al armatei ruse. </a><br>
+ 
+</div>
+							</div>
+							<div class="tab-pane" id="portlet_tab3">
+								<h4>Date personale</h4>
+								<div class="list-group">
+  <a  class="list-group-item">La 3 noiembrie 1869 are loc căsătoria lui Carol I cu Elisabeta de Wied.  </a>
+  <a  class="list-group-item">La 25 septembrie 1883 are loc inaugurarea oficială a Castelului Peleş. </a>
+  <a  class="list-group-item">În 1890 Principele moştenitor Ferdinand este desemnat membru de onoare al Academiei Române.  </a><br>
+  <a  class="list-group-item">La 22 decembrie 1892 s-a adoptat lege referitoare la înaintarea în diferite grade a membrilor Familiei regale care fac serviciul în armată iar la 29 decembrie același an are loc căsătoria principelui moştenitor Ferdinand cu Maria, principesă de Marea Britanie. La 31 decembrie este votată legea pentru constituirea dotatiei anuale a principelui moştenitor Ferdinand. </a>
+  <a  class="list-group-item">La 5 august 1903 se naşte principele Nicolae, fiul principilor moştenitori Ferdinand Şi Maria.  </a>
+  <a  class="list-group-item">În 1890 Principele moştenitor Ferdinand este desemnat membru de onoare al Academiei Române.  </a><br>
+ <a  class="list-group-item">La 3 noiembrie 1869 are loc căsătoria lui Carol I cu Elisabeta de Wied.  </a>
+  <a  class="list-group-item">La 25 septembrie 1883 are loc inaugurarea oficială a Castelului Peleş. </a>
+  <a  class="list-group-item">În 1890 Principele moştenitor Ferdinand este desemnat membru de onoare al Academiei Române.  </a><br>
+  <a  class="list-group-item">La 23 decembrie același an se naşte principesa Ileana, fiica principilor moştenitori Ferdinand şi Maria. </a>
+  <a  class="list-group-item">21 decembrie 1912 se naște principele Mircea, ultimul copil al principilor moştenitori Ferdinand şi Maria.   </a>
+ 
+</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<!-- END Portlet PORTLET-->
+			</div>
+	</div>
+<div class="col-md-2"></div>
+<div class="col-md-3">
+	 
+	<br>
+	<br>
+    <div class="row">
+		
+        
+        
+        	<div class="well">
+        		<center><h1 class="text-info">Mihai I</h1></center>
+				<hr>
+				<center><img src="img/misu.jpg"></center>
+        		<hr>
+        		<p><strong>Domnie:    </strong>20 iulie 1927 – 8 iunie 1930</p>
+        		<hr>
+				<p><strong>A doua domnie:    </strong>6 septembrie 1940 – 30 decembrie 1947</p>
+        		<hr>
+				
+        		<p><strong>Căsatorit cu:  </strong>Ana, Principesă de Bourbon-Parma (10 iunie 1948 - 1 august 2016)</p>
+        		<hr>
+				
+        		
+        		<p><strong>Naștere:    </strong>25 octombrie 1921 (95 de ani)Sinaia, Romania</p>
+        		<hr>
+        		
+				<p><strong>Familie:    </strong><br>
+Tată: Carol al II-lea al României
+<br>Mamă:
+Regina mamă Elena</p>
+        		<hr>
+             
+        	</div>
+       
+</div>
+	</div>
+	
+	
+          <div class="row">
+              <div class="col-lg-12" style="padding-bot:5em;text-align:center;">
+			  <hr>
+                 <a class="btn btn-default page-scroll" href="#stiaica" ><img class="img-responsive" src="img/down.png" alt="" style="height:20px;"></a>
+              </div>
+          </div>
+
+    </section>
+
+
+ 
+    
+
+	
+       
+	
+ 
+    
+	<br>
+	<br>
+	<section id="stiaica" class="istoric">
+	
+	
+	
+<div class="container" style="height:500px" >
+<div class="row">
+                    <div class="col-md-12" data-wow-delay="0.2s" >
+                        <div class="carousel slide" data-ride="carousel" id="quote-carousel" style="height:450px" >
+                            <!-- Bottom Carousel Indicators -->
+                            <ol class="carousel-indicators" style="padding-right:320px;">
+                                <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="img/semn.jpg" alt="">
+                                </li>
+                                <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="img/semn.jpg" alt="">
+                                </li>
+                                <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="img/semn.jpg" alt="">
+                                </li>
+                            </ol>
+
+                            <!-- Carousel Slides / Quotes -->
+                            <div class="carousel-inner text-center">
+
+                                <!-- Quote 1 -->
+                                <div class="item active">
+                                    <blockquote>
+                                        <div class="row">
+                                            <div class="col-sm-8 col-sm-offset-2">
+												<h1>Știați că...?</h1>
+                                                <p>Regele Mihai I al Romaniei, a purtat incepand cu anul 1930 si titlul de Mare Voievod de Alba Iulia.</p>
+                                                
+                                            </div>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                                <!-- Quote 2 -->
+                                <div class="item">
+                                    <blockquote>
+                                        <div class="row">
+                                            <div class="col-sm-8 col-sm-offset-2">
+<h1>Știați că...?</h1>
+                                                <p>La data de 23 august 1944, Regele Mihai l-a demis pe Mareşalul Ion Antonescu. </p>
+                                              
+                                            </div>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                                <!-- Quote 3 -->
+                                <div class="item">
+                                    <blockquote>
+                                        <div class="row">
+                                            <div class="col-sm-8 col-sm-offset-2">
+<h1>Știați că...?</h1>
+                                                <p>În buletinul medical al nașterii sale stă scris că starea sa de sănătătate din ziua în care a venit pe lume este „destul de satisfăcătoare”, mama sa suferind o intervenție chirurgicală serioasă, întrucât situația sarcinii se complicase .</p>
+                                          
+                                            </div>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+                            <!-- Carousel Buttons Next/Prev -->
+                            <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+                            <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+</div>
+
+<div class="row">
+              <div class="col-lg-12" style="padding-bot:3em;text-align:center;">
+			  <hr>
+			     <a class="btn btn-default page-scroll" href="#page-top" >Înapoi sus</a>
+                 <a class="btn btn-default page-scroll" onclick="goBack()">Înapoi la site</a>
+				 
+              </div>
+          </div>
+    </section>
+
+	<section id="footer" class="footer">
+	
+	
+	
+	<hr>
+	<center><small>&copy; Site realizat de Bîrleanu Andrei-Cristian</small></center>
+	<hr>
+	
+	</section>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	<script>
+function goBack() {
+    window.history.back();
+}
+
+
+
+
+
+
+
+$(document).ready( function() {
+    $('#myCarousel').carousel({
+    	interval:   4000
+	});
+	
+	var clickEvent = false;
+	$('#myCarousel').on('click', '.nav a', function() {
+			clickEvent = true;
+			$('.nav li').removeClass('active');
+			$(this).parent().addClass('active');		
+	}).on('slid.bs.carousel', function(e) {
+		if(!clickEvent) {
+			var count = $('.nav').children().length -1;
+			var current = $('.nav li.active');
+			current.removeClass('active').next().addClass('active');
+			var id = parseInt(current.data('slide-to'));
+			if(count == id) {
+				$('.nav li').first().addClass('active');	
+			}
+		}
+		clickEvent = false;
+	});
+});
+</script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+
+	
+	
+</body>
+
+</html>
+

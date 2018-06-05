@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Regele Ferdinand</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+	
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<style>
+/* Carousel */
+
+#quote-carousel {
+    padding: 0 10px 30px 10px;
+    margin-top: 30px;
+    /* Control buttons  */
+    /* Previous button  */
+    /* Next button  */
+    /* Changes the position of the indicators */
+    /* Changes the color of the indicators */
+}
+#quote-carousel .carousel-control {
+    background: none;
+    color: #CACACA;
+    font-size: 2.3em;
+    text-shadow: none;
+    margin-top: 30px;
+}
+#quote-carousel .carousel-control.left {
+    left: -60px;
+}
+#quote-carousel .carousel-control.right {
+    right: -60px;
+}
+#quote-carousel .carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: 0px;
+    margin-right: -19px;
+}
+#quote-carousel .carousel-indicators li {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+    border: 4px solid #CCC;
+    border-radius: 50px;
+    opacity: 0.4;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+#quote-carousel .carousel-indicators .active {
+    background: #333333;
+    width: 128px;
+    height: 128px;
+    border-radius: 100px;
+    border-color: #f33;
+    opacity: 1;
+    overflow: hidden;
+}
+.carousel-inner {
+    min-height: 300px;
+}
+.item blockquote {
+    border-left: none;
+    margin: 0;
+}
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+
+
+
+.list-group>li:hover{background-color:lightblue;};
+
+
+
+
+/* Makes images fully responsive */
+
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ------------------- Carousel Styling ------------------- */
+
+.carousel-inner {
+  border-radius: 15px;
+}
+
+.carousel-caption {
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  padding: 0 0 10px 25px;
+  color: #fff;
+  text-align: left;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 15;
+  margin: 0;
+  padding: 0 25px 25px 0;
+  text-align: right;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+}
+
+
+/* ------------------- Section Styling - Not needed for carousel styling ------------------- */
+
+.section-white {
+   padding: 10px 0;
+}
+
+.section-white {
+  background-color: #fff;
+  color: #555;
+}
+
+@media screen and (min-width: 768px) {
+
+  .section-white {
+     padding: 1.5em 0;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+
+  .container {
+    max-width: 930px;
+  }
+
+}
+
+
+
+
+
+
+
+
+/***
+Bootstrap Line Tabs by @keenthemes
+A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+Licensed under MIT
+***/
+
+.content {
+	padding: 30px;
+	background: #f1f3fa;
+}
+
+.margin-bottom-30 {
+	margin-bottom: 30px;
+}
+
+/* Portlet */
+.portlet {
+	background: #fff;
+	padding: 20px;
+}
+
+.portlet.portlet-gray {
+	background: #f7f7f7;
+}
+
+.portlet.portlet-bordered {
+	border: 1px solid #eee;
+}
+
+/* Portlet Title */
+.portlet-title {
+	padding: 0;
+  	min-height: 40px;
+  	border-bottom: 1px solid #eee;
+  	margin-bottom: 18px;
+}
+
+.caption {
+	float: left;
+	display: inline-block;
+	font-size: 18px;
+	line-height: 18px;
+}
+
+.caption.caption-green .caption-subject,
+.caption.caption-green i {
+	color: #4db3a2;
+	font-weight: 200;
+}
+
+.caption.caption-red .caption-subject,
+.caption.caption-red i {
+	color: #e26a6a;
+	font-weight: 200;
+}
+
+.caption.caption-purple .caption-subject,
+.caption.caption-purple i {
+	color: #8775a7;
+	font-weight: 400;
+}
+
+.caption i {
+	color: #777;
+	font-size: 15px;
+	font-weight: 300;
+	margin-top: 3px;
+}
+
+.caption-subject {
+	color: #666;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.caption-helper {
+	padding: 0;
+	margin: 0;
+	line-height: 13px;
+	color: #9eacb4;
+	font-size: 13px;
+	font-weight: 400;
+}
+
+/* Actions */
+.actions {
+	float: right;
+  	display: inline-block;
+}
+
+.actions a {
+	margin-left: 3px;
+}
+
+.actions .btn {
+	color: #666;
+	padding: 3px 9px;
+	font-size: 13px;
+  	line-height: 1.5;
+  	background-color: #fff;
+  	border-color: #ccc;
+  	border-radius: 50px;
+}
+
+.actions .btn i {
+	font-size: 12px;
+}
+
+.actions .btn:hover {
+	background: #f2f2f2;
+}
+
+/* Pagination */
+.pagination {
+	margin: -3px 0 0;
+	border-radius: 50px;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+	padding: 4px 10px;
+	font-size: 12px;
+	color: #8775a7;
+	background: #f7f7f7;
+}
+
+.pagination > li:hover > a,
+.pagination > li.active > a,
+.pagination > li.active:hover > a {
+	color: #fff;
+	background: #8775a7;
+	border-color: #8775a7;
+}
+
+/* Inputs */
+.inputs {
+	float: right;
+	display: inline-block;
+	padding: 4px 0;
+	margin-top: -10px;
+}
+
+.input-inline {
+	width: 240px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* Tab */
+.portlet-title > .nav-tabs {
+	background: none;
+	margin: 0;
+	float: right;
+	display: inline-block;
+	border: 0;
+}
+
+.portlet-title > .nav-tabs > li {
+	background: none;
+	margin: 0;
+	border: 0;
+}
+
+.portlet-title > .nav-tabs > li > a {
+	background: none;
+	border: 0;
+	padding: 2px 10px 13px;
+	color: #444;
+}
+
+.portlet-title > .nav-tabs > li.active,
+.portlet-title > .nav-tabs > li.active:hover {
+  	border-bottom: 4px solid #f3565d;
+  	position: relative;
+  }
+
+  .portlet-title > .nav-tabs > li:hover {
+  	border-bottom: 4px solid #f29b9f;
+  }
+
+.portlet-title > .nav-tabs > li.active > a,
+.portlet-title > .nav-tabs > li:hover > a {
+	color: #333;
+	background: #fff;
+	border: 0;
+}
+
+
+</style>
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar" data-offset="60" background="img/bg1.png">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a style="padding-top:2px;" class="navbar-brand page-scroll" href="#page-top"><img style ="width:40px;" src="img/1.png"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><a class="page-scroll" href="#about">DESPRE</a></li>
+		
+		<li><a class="page-scroll" href="#stiaica">ȘTIAȚI CĂ?</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+	
+	
+	<br>
+	<br>
+	<br>
+	
+	
+
+<!-------- don't use this html this only for margin top remove this ---------------------->
+ <section class="section-white" id="intro">
+
+<br><br><br>
+<center><h1 style="font-family:Monotype Corsiva;font-size:50px;"><hr>Regele Ferdinand</h1>
+<hr>
+</center>
+
+<br>
+<br>
+
+ <div class="container">
+
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" style="-webkit-box-shadow: 10px 10px 25px 6px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 25px 6px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 25px 6px rgba(0,0,0,0.75);">
+        <div class="item active">
+          <img style="height:400px;width:100%;" src="img/ferdinandbg2.jpg" alt="...">
+          <div class="carousel-caption">
+            <h2>Regele Ferdinand</h2>
+          </div>
+        </div>
+        <div class="item">
+          <img style="height:400px; width:100%;"src="img/ferdinandbg.jpg" alt="...">
+          <div class="carousel-caption">
+            <h2>Regele Ferdinand</h2>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/ferdinandbg3.jpg" style="height:400px; width:100%;" alt="...">
+          <div class="carousel-caption">
+            <h2>Regele Ferdinand</h2>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+
+  </div>
+  <br>
+  <br>
+  <hr>
+ 
+	<center><a class="btn btn-default btn-lg page-scroll" role="button" href="#about">Derulează</a><center>
+</section>
+    
+	<br>
+	<br>
+
+ <section id="about" class="despre1">
+     
+        
+		<div class="col-md-7">
+		<br>
+		<center><h1>Despre</h1></center>
+		<hr>
+		<br>
+		<br>
+		<br>
+		<br>
+				<!-- BEGIN Portlet PORTLET-->
+				<div class="portlet">
+					<div class="portlet-title">
+						<div class="caption caption-red">
+							<i class="glyphicon glyphicon-pushpin"></i>
+							
+						</div>
+						<ul class="nav nav-tabs">
+							<li >
+								<a href="#portlet_tab3" data-toggle="tab">
+								Date personale</a>
+							</li>
+							<li>
+								<a href="#portlet_tab2" data-toggle="tab">
+								Politică externă </a>
+							</li>
+							<li class="active">
+								<a href="#portlet_tab1" data-toggle="tab">
+								Politică internă</a>
+							</li>
+						</ul>
+					</div>
+					<div class="portlet-body">
+						<div class="tab-content">
+							<div class="tab-pane active" id="portlet_tab1">
+								<h4>Politică internă</h4>
+								<div class="list-group">
+								
+  <a  class="list-group-item">La 12 noiembrie 1916 în urma înfrîngerilor militare, Familia regală (alături de celelalte autorităţi ale statului) se retrage la Iaşi. La 23 noiembrie 1918, Bucureştiul este ocupat de trupele Puterilor Centrale. </a>
+
+  <a  class="list-group-item">În perioada 11 decembrie 1916- 26 ianuarie 1918 funcționează guvernul Ion I.C. Brătianu ce reprezintă un Cabinet de colaborare între Partidul Naţional Liberal şi Partidul Conservator-Democrat. La 25 decembrie 1916 se instituie ordinul Mihai Viteazul.</a>
+
+  <a  class="list-group-item">La 5 februarie 1917 se instituie ordinul Crucea Regina Maria. La 23 martie Regele Ferdinand I li se adresează ostasilor Armatei a II-a, promiţîndu-le pămînt şi vot obstesc. Promisiunea este repetată la 22 aprilie 1917. </a><br>
+
+ <a  class="list-group-item">Legea pentru modificarea articolelor 19, 57 şi 67 din Constituţie, menită să transforme în principii constituţionale împroprietărirea ţăranilor şi votul universala fost adoptată la 20 iulie 1917 iar în perioada iulie- august s-au desfășurat marile bătălii de la Mărăşti, Mărăşeşti şi Oituz. </a>
+ 
+ <a  class="list-group-item">La 31 august 1918 are loc căsătoria principelui moştenitor cu Ioana Maria Valentina Lambrino. La 2 septembrie 1918, Carol renunţă în scris la drepturile sale de moştenitor al tronului. Căsătoria este anulată la 8 ianuarie 1919. </a>
+
+  <a  class="list-group-item">La 12 august 1918 ia fiinţă Partidul Taranesc din Basarabia, avîndu-l ca preşedinte pe Pantelimon Halippa. </a><br>
+
+
+ <a  class="list-group-item">În perioada 24 octombrie-19 noiembrie 1918 a funcționat guvernul general Constantin Coandă. Prin desemnarea generalului Constantin Coandă ca premier (susţinut de Ion I.C. Brătianu), se sublinia sarcina eminamente militară a acestui guvern apolitic, de tranzitie. </a>
+ 
+  <a  class="list-group-item">La 14 noiembrie 1918 este adoptat decretul-lege de punere în aplicare a principiului votului universal pentru alegerile din vechiul Regat şi Basarabia iar la 15 noiembrie se realizează unirea Bucovinei cu România. La 18 noiembrie este proclamată unirea Transilvaniei cu România urmată de intrarea triumfală a suveranilor României în capitala ţării. Regele Ferdinand I este învestit maresal al armatei române. </a>
+
+  <a  class="list-group-item">La 5 decembrie 1918 se constituie Partidul Țărănesc avîndu-l ca preşedinte pe Ion Mihalache. Din 29 noiembrie 1918 intră în funcție guvernul Ion I.C. Brătianu ceea ce însemna revenirea la putere a Partidului Naţional Liberal. </a><br>
+
+ <a  class="list-group-item">La 15 și 16 decembrie 1918  sunt adoptate decretele-legi pentru exproprierea moşiilor în vederea împroprietăririi ţăranilor. </a>
+ 
+  <a  class="list-group-item">La 28 iunie 1919 se semnează la Versailles tratatul de pace între Puterile Aliate (printre care şi România) şi Germania. La 1 august 1919 într-o scrisoare adresată lui Ferdinand I (şi, în copie, liderilor principalelor partide politice), principele Carol declară că renunţă la calitatea de moştenitor al Coroanei însă la 20 februarie 1920, îi cere Regelui să considere scrisoarea ca nulă şi neavenită. </a>
+
+ <a  class="list-group-item">Începând cu 10 ianuarie 1920 intră în vigoare Pactul Societăţii Naţiunilor, România numărîndu-se printre membrii săi fondatori. Guvernul general Alexandru Averescu constituit din rândul Partidului Poporului este completat (la 13 iunie 1920) cu trei exponenţi ai Partidului Conservator-Democrat.  </a>
+ 
+  <a  class="list-group-item">La 12 decembrie 1025 Principele moştenitor Carol renunţă la calitatea de moştenitor al tronului, renunţare întărită printr-o nouă scrisoare trimisă Regelui Ferdinand I la 28 decembrie 1925. Drept urmare la 31 decembrie 1925 Consiliul de Coroană se pronunţă pentru acceptarea renunţării la tron a principelui moştenitor Carol iar la 4 ianuarie 1926 Reprezentanţa naţională primeşte renunţarea la tron a principelui Carol şi îl proclamă pe Mihai, fiul său, moştenitor al Coroanei. Acelaşi for instituie o Regenţă (principele Nicolae, patriarhul Miron Cristea, prim-presedintele Înaltei Curti de Casaţie şiJustiţie Gheorghe Buzdugan) pentru eventualitatea că Mihai ar ajunge rege înaintea majoratului şi face unele modificări în statutul Familiei domnitoare. </a>
+  
+   <a  class="list-group-item"> La 24 iunie 1927 se înfiinţează Liga “Arhanghelul Mihail » (Garda de Fier, Partidul „ Totul pentru Iară », Mişcarea Legionară). Comandantul ei este Corneliu Zelea Codreanu. </a>
+   
+    <a  class="list-group-item"> În perioada 10 noiembrie 1928- 7 iunie 1930 a funcționat guvernul Iuliu Maniu. Cabinetul marchează venirea la putere a Partidului Naţional-Tărănesc. 
+La 10 mai 1929 se instituie ordinul Ferdinand I iar la 28 mai  Principele Nicolae, Înalt Regent, este desemnat membru de onoare al Academiei Române. 
+</a>
+
+  
+
+
+
+</div>
+							</div>
+							<div class="tab-pane" id="portlet_tab2">
+								<h4>Politică externă</h4>
+								<div class="list-group">
+								
+								
+  <a  class="list-group-item">În ziua de 4 august 1916 se semnează convenţia politică şi cea militară cu puterile Antantei, care îi recunoşteau României dreptul legitim de a anexa teritoriile din Austro-Ungaria locuite de români iar la 14 august Consiliul de Coroană prezidat de Regele Ferdinand I se pronunţă pentru intrarea ţării în războiul de întregire. România declară război Austro-Ungariei.</a>
+
+  <a  class="list-group-item">În urma defensivei ruse pe toate fronturile, provocată de instaurarea puterii bolşevice la 26 noiembrie  guvernul român este silit să semneze cu Puterile Centrale armistiţiul de la Focşani.</a>
+
+  <a  class="list-group-item">La 29 ianuarie 1918 își începe activitatea guvernul general Alexandru Averescu. Condus de un vestit militar, guvernul este chemat să gestioneze o situaţie de criză gravă, căci România trebuie să facă faţă singură presiunii Puterilor Centrale. În zilele de 17, 18 și 19 februarie au loc trei Consilii de Coroană succesive, în urma cărora guvernul decide să încheie pacea separată cu Puterile Centrale. Guvernul Alexandru Marghiloman. Format de Partidul Conservator, acest Cabinet de sacrificiu trebuie să semneze tratatul de pace impus de Puterile Centrale. 
+La 28 martie se realizează unirea Basarabiei cu România. </a><br>
+
+  <a  class="list-group-item">La 3 aprilie 1918 se înfiinţează Partidul Poporului, avându-l ca preşedinte pe Alexandru Averescu iar la 24 aprilie se semnează tratatul de pace de la Bucureşti dintre România şi Germania, Austro-Ungaria, Bulgaria, Turcia.</a>
+
+  <a  class="list-group-item">La 27 octombrie 1918 se decretează mobilizarea armatei române pentru eliberarea ţării de sub ocupaţia Puterilor Centrale. </a>
+
+  <a  class="list-group-item">În perioada 18 ianuarie 1919- 21 ianuarie 1920 se desfășoară conferinţa de pace de la Paris care elaborează tratatele de pace dintre tările învingătoare în primul război mondial (printre care şi România) şi ţările învinse. </a><br>
+
+ <a  class="list-group-item">La 10 septembrie 1919 se semnează la Saint-Germain-enLaye tratatul de pace între Puterile Aliate şi Austria. România îl semnează la 10 decembrie 1919. </a>
+ 
+  <a  class="list-group-item">La 27 noiembrie 1919 se semnează la Neuilly-sur-Seine tratatul de pace între Puterile Aliate si Bulgaria. România îl semnează la 10 decembrie 1919. </a><br>
+
+<a  class="list-group-item">În perioada 16-19 mai 1920 are loc vizita Regelui Ferdinand I şi a Reginei Maria în Basarabia. </a><br>
+
+<a  class="list-group-item">La 28 octombrie 1920 se semnează la Paris un tratat între Marea Britanie, Franta, Italia, Japonia şi România, prin care se recunoaşte suveranitatea României asupra Basarabiei. </a><br>
+
+<a  class="list-group-item">La 23 aprilie 1921 se încheie Convenţia de alianţă defensivă între România şi Cehoslovacia. </a><br>
+
+<a  class="list-group-item">La 17 iunie 1921 se încheie Convenţia de alianţă defensivă între România şi Iugoslavia.  </a><br>
+
+<a  class="list-group-item">La 24 iulie 1923 se semnează la Lausanne tratatul de pace cu Turcia. Printre ţările semnatare se află şi România. </a><br>
+
+<a  class="list-group-item">La 10 iunie 1926 se semnează tratatul de amicitie între România şi Franţa urmat la 16 septembrie de semnarea unui pact de amicitie şi colaborare între România şi Italia. </a><br>
+
+<a  class="list-group-item">La 10 mai 1927 se semnează un concordat între România şi Vatican. </a><br>
+
+<a  class="list-group-item">La 4 septembrie 1928 România aderă la Tratatul multilateral pentru renunţarea la război ca instrument de politică naţională (pactul Briand-Kellogg). </a><br>
+ 
+</div>
+							</div>
+							<div class="tab-pane" id="portlet_tab3">
+								<h4>Date personale</h4>
+								<div class="list-group">
+  <a  class="list-group-item">La 27 septembrie 1914 încetează din viaţă Regele Carol I iar a doua zi  Ferdinand I depune jurămintul ca Rege al României. Carol, fiul Regelui Ferdinand I şi al Reginei Maria, devine principe moştenitor al Coroanei României. </a>
+
+  <a  class="list-group-item">La 29 septembrie Regele Ferdinand I este desemnat preşedinte de onoare şi protector al Academiei Române iar la 23 decembrie este adoptată legea pentru fixarea listei civile a Regelui Ferdinand I. </a>
+
+  <a  class="list-group-item">La 18 februarie 1916 încetează din Viaţă Regina Elisabeta. </a><br>
+
+ <a  class="list-group-item">La 18 octombrie 1916 încetează din viaţă principele Mircea, fiul Regelui Ferdinand I şi al Reginei Maria.</a>
+ 
+  <a  class="list-group-item">
+La 31 august 1918 are loc căsătoria principelui moştenitor cu Ioana Maria Valentina Lambrino. La 2 septembrie 1918, Carol renunţă în scris la drepturile sale de moştenitor al tronului. Căsătoria este anulată la 8 ianuarie 1919. </a>
+
+  <a  class="list-group-item">În perioada februarie-aprilie 1919 are loc călătoria Reginei Maria la Paris și la Londra. </a><br>
+
+
+ <a  class="list-group-item">La 27 februarie 1921 are loc căsătoria principesei Elisabeta cu George, duce de Sparta, moştenitorul tronului Greciei. Elisabeta va fi regină a Greciei între 27 septembrie 1922 Şi 18 decembrie 1923. La 10 martie 1921 are loc căsătoria principelui moştenitor Carol cu Elena, principesă de Grecia. </a>
+ 
+  <a  class="list-group-item">La 25 octombrie 1921 Se naşte principele Mihai, fiul principelui moştenitor Carol şi al principesei Elena. </a>
+
+  <a  class="list-group-item">La 8 iunie 1922 are loc căsătoria principesei Maria cu Alexandru I, Regele Iugoslaviei.</a><br>
+
+ <a  class="list-group-item">La 15 octombrie 1922 are loc solemnitatea încoronării Regelui Ferdinand I şi a Reginei Maria, la Alba Iulia. </a>
+ 
+  <a  class="list-group-item">La 20 iulie 1927 încetează din viaţă Regele Ferdinand I. Mihai I este proclamat Rege al României, puterile regale fiind exercitate de Regenţă, care depune în aceeaşi zi jurămintul.</a>
+
+ 
+ 
+</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<!-- END Portlet PORTLET-->
+			</div>
+	</div>
+<div class="col-md-2"></div>
+<div class="col-md-3">
+	 
+	<br>
+	<br>
+    <div class="row">
+		
+        
+        
+        	<div class="well">
+        		<center><h1 class="text-info">Ferdinand</h1></center>
+				<hr>
+				<center><img src="img/ferdinand.jpg"></center>
+        		<hr>
+        		<p><strong>Domnie:    </strong>10 octombrie 1914 – 20 iulie 1927</p>
+        		<hr>
+				
+        		<p><strong>Căsatorit cu:  </strong>Regina Maria</p>
+        		<hr>
+				
+        		<p><strong>Nume complet: </strong>Ferdinand Viktor Albert Meinrad von Hohenzollern-Sigmaringen</p>
+        		<hr>
+				
+        		<p><strong>Naștere:    </strong>24 august 1865 Sigmaringen</p>
+        		<hr>
+        		
+        		<p><strong>Deces:    </strong>20 iulie 1927 (61 de ani)Sinaia</p>
+        		<hr>
+				<p><strong>Familie:    </strong><br>
+Tată: 	Leopold de Hohenzollern-Sigmaringen
+<br>Mamă:
+Antonia de Saxa-Coburg-Gotha</p>
+        		<hr>
+             
+        	</div>
+       
+</div>
+	</div>
+	
+	
+          <div class="row">
+              <div class="col-lg-12" style="padding-bot:5em;text-align:center;">
+                 <a class="btn btn-default page-scroll" href="#stiaica" ><img class="img-responsive" src="img/down.png" alt="" style="height:20px;"></a>
+              </div>
+          </div>
+
+    </section>
+
+
+ 
+    
+
+	
+       
+	
+ 
+    
+	<br>
+	<br>
+	<section id="stiaica" class="istoric">
+	
+	
+	
+<div class="container" style="height:500px">
+<div class="row">
+                    <div class="col-md-12" data-wow-delay="0.2s">
+                        <div class="carousel slide" data-ride="carousel" id="quote-carousel" style="height:450px">
+                            <!-- Bottom Carousel Indicators -->
+                            <ol class="carousel-indicators" style="padding-right:320px;">
+                                <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="img/semn.jpg" style= alt="">
+                                </li>
+                                <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="img/semn.jpg" alt="">
+                                </li>
+                                <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="img/semn.jpg" alt="">
+                                </li>
+                            </ol>
+
+                            <!-- Carousel Slides / Quotes -->
+                            <div class="carousel-inner text-center">
+
+                                <!-- Quote 1 -->
+                                <div class="item active">
+                                    <blockquote>
+                                        <div class="row">
+                                            <div class="col-sm-8 col-sm-offset-2">
+												<h1>Știați că...?</h1>
+                                                <p> Catedrala Încoronării este considerată un simbol al reîntregirii de țara, în interiorul acesteia fiind încoronat regele Ferdinand, sub domnia căruia a fost realizată Marea Unire.</p>
+                                                
+                                            </div>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                                <!-- Quote 2 -->
+                                <div class="item">
+                                    <blockquote>
+                                        <div class="row">
+                                            <div class="col-sm-8 col-sm-offset-2">
+<h1>Știați că...?</h1>
+                                                <p>Palatul Culturii din Iaşi a fost inaugurat în anul 1926 de către regele Ferdinand.</p>
+                                             
+                                            </div>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                                <!-- Quote 3 -->
+                                <div class="item">
+                                    <blockquote>
+                                        <div class="row">
+                                            <div class="col-sm-8 col-sm-offset-2">
+<h1>Știați că...?</h1>
+                                                <p>La data de 15 octombrie 1922, Ferdinand și Maria s-au încoronat regi la Alba Iulia.</p>
+                                            
+                                            </div>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+                            <!-- Carousel Buttons Next/Prev -->
+                            <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+                            <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+</div>
+
+<div class="row">
+              <div class="col-lg-12" style="padding-bot:5em;text-align:center;">
+			     <a class="btn btn-default page-scroll" href="#page-top" >Înapoi sus</a>
+                 <a class="btn btn-default page-scroll" onclick="goBack()">Înapoi la site</a>
+				 
+              </div>
+          </div>
+    </section>
+
+	<section id="footer" class="footer">
+	
+	
+	
+	<hr>
+	<center><small>&copy; Site realizat de Bîrleanu Andrei-Cristian</small></center>
+	<hr>
+	
+	</section>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	<script>
+function goBack() {
+    window.history.back();
+}
+
+
+
+
+
+
+
+$(document).ready( function() {
+    $('#myCarousel').carousel({
+    	interval:   4000
+	});
+	
+	var clickEvent = false;
+	$('#myCarousel').on('click', '.nav a', function() {
+			clickEvent = true;
+			$('.nav li').removeClass('active');
+			$(this).parent().addClass('active');		
+	}).on('slid.bs.carousel', function(e) {
+		if(!clickEvent) {
+			var count = $('.nav').children().length -1;
+			var current = $('.nav li.active');
+			current.removeClass('active').next().addClass('active');
+			var id = parseInt(current.data('slide-to'));
+			if(count == id) {
+				$('.nav li').first().addClass('active');	
+			}
+		}
+		clickEvent = false;
+	});
+});
+</script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+
+	
+	
+</body>
+
+</html>
+

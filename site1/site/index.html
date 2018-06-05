@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>INDEX</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+	
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<style>
+.hovereffect {
+width:100%;
+height:100%;
+float:left;
+overflow:hidden;
+position:relative;
+text-align:center;
+cursor:default;
+}
+
+.hovereffect .overlay {
+width:100%;
+height:100%;
+position:absolute;
+overflow:hidden;
+top:0;
+left:0;
+opacity:0;
+background-color:rgba(0,0,0,0.5);
+-webkit-transition:all .4s ease-in-out;
+transition:all .4s ease-in-out
+}
+
+.hovereffect img {
+display:block;
+position:relative;
+-webkit-transition:all .4s linear;
+transition:all .4s linear;
+}
+
+.hovereffect h2 {
+text-transform:uppercase;
+color:#fff;
+text-align:center;
+position:relative;
+font-size:17px;
+background:rgba(0,0,0,0.6);
+-webkit-transform:translatey(-100px);
+-ms-transform:translatey(-100px);
+transform:translatey(-100px);
+-webkit-transition:all .2s ease-in-out;
+transition:all .2s ease-in-out;
+padding:10px;
+}
+
+.hovereffect a.info {
+text-decoration:none;
+display:inline-block;
+text-transform:uppercase;
+color:#fff;
+border:1px solid #fff;
+background-color:transparent;
+opacity:0;
+filter:alpha(opacity=0);
+-webkit-transition:all .2s ease-in-out;
+transition:all .2s ease-in-out;
+margin:50px 0 0;
+padding:7px 14px;
+}
+
+.hovereffect a.info:hover {
+box-shadow:0 0 5px #fff;
+}
+
+.hovereffect:hover img {
+-ms-transform:scale(1.2);
+-webkit-transform:scale(1.2);
+transform:scale(1.2);
+}
+
+.hovereffect:hover .overlay {
+opacity:1;
+filter:alpha(opacity=100);
+}
+
+.hovereffect:hover h2,.hovereffect:hover a.info {
+opacity:1;
+filter:alpha(opacity=100);
+-ms-transform:translatey(0);
+-webkit-transform:translatey(0);
+transform:translatey(0);
+}
+
+.hovereffect:hover a.info {
+-webkit-transition-delay:.2s;
+transition-delay:.2s;
+}
+
+
+/*
+Fade content bs-carousel with hero headers
+Code snippet by maridlcrmn (Follow me on Twitter @maridlcrmn) for Bootsnipp.com
+Image credits: unsplash.com
+*/
+
+/********************************/
+/*       Fade Bs-carousel       */
+/********************************/
+.fade-carousel {
+    position: relative;
+    height: 100vh;
+}
+.fade-carousel .carousel-inner .item {
+    height: 100vh;
+}
+.fade-carousel .carousel-indicators > li {
+    margin: 0 2px;
+    background-color: #f39c12;
+    border-color: #f39c12;
+    opacity: .7;
+}
+.fade-carousel .carousel-indicators > li.active {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+}
+
+/********************************/
+/*          Hero Headers        */
+/********************************/
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-50%,-50%,0);
+         -moz-transform: translate3d(-50%,-50%,0);
+          -ms-transform: translate3d(-50%,-50%,0);
+           -o-transform: translate3d(-50%,-50%,0);
+              transform: translate3d(-50%,-50%,0);
+}
+.hero h1 {
+    font-size: 6em;    
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.fade-carousel .carousel-inner .item .hero {
+    opacity: 0;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s; 
+        -ms-transition: 2s all ease-in-out .1s; 
+         -o-transition: 2s all ease-in-out .1s; 
+            transition: 2s all ease-in-out .1s; 
+}
+.fade-carousel .carousel-inner .item.active .hero {
+    opacity: 1;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s; 
+        -ms-transition: 2s all ease-in-out .1s; 
+         -o-transition: 2s all ease-in-out .1s; 
+            transition: 2s all ease-in-out .1s;    
+}
+
+/********************************/
+/*            Overlay           */
+/********************************/
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #080d15;
+    opacity: .7;
+}
+
+/********************************/
+/*          Custom Buttons      */
+/********************************/
+.btn.btn-lg {padding: 10px 40px;}
+.btn.btn-hero,
+.btn.btn-hero:hover,
+.btn.btn-hero:focus {
+    color: #f5f5f5;
+    background-color: #1abc9c;
+    border-color: #1abc9c;
+    outline: none;
+    margin: 20px auto;
+}
+
+/********************************/
+/*       Slides backgrounds     */
+/********************************/
+.fade-carousel .slides .slide-1, 
+.fade-carousel .slides .slide-2,
+.fade-carousel .slides .slide-3 {
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.fade-carousel .slides .slide-1 {
+  background-image: url(https://ununsplash.imgix.net/photo-1416339134316-0e91dc9ded92?q=75&fm=jpg&s=883a422e10fc4149893984019f63c818); 
+}
+.fade-carousel .slides .slide-2 {
+  background-image: url(https://ununsplash.imgix.net/photo-1416339684178-3a239570f315?q=75&fm=jpg&s=c39d9a3bf66d6566b9608a9f1f3765af);
+}
+.fade-carousel .slides .slide-3 {
+  background-image: url(https://ununsplash.imgix.net/photo-1416339276121-ba1dfa199912?q=75&fm=jpg&s=9bf9f2ef5be5cb5eee5255e7765cb327);
+}
+
+/********************************/
+/*          Media Queries       */
+/********************************/
+@media screen and (min-width: 980px){
+    .hero { width: 980px; }    
+}
+@media screen and (max-width: 640px){
+    .hero h1 { font-size: 4em; }    
+}
+
+
+
+.heading{
+	display: table;
+	margin: 5% auto 0;
+	text-transform: uppercase;
+	font-family: 'Anaheim', sans-serif;
+	font-size: 4em;
+	font-weight: 400;
+	text-shadow: 0 1px white, 0 2px black;
+}
+.container1{
+	margin:15% auto;
+	width: 210px;
+	height: 440px;
+	position: relative;
+	perspective: 1000px;
+}
+#carousel{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform-style: preserve-3d;
+	animation: rotation 30s infinite linear;
+}
+
+#carousel figure{
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 50%px;
+	left: 10px;
+	top: 10px;
+	background: black;
+	overflow: hidden;
+	border: solid 5px black;
+}
+#carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(488px);}
+#carousel figure:nth-child(2) { transform: rotateY(40deg) translateZ(488px);}
+#carousel figure:nth-child(3) { transform: rotateY(80deg) translateZ(488px);}
+#carousel figure:nth-child(4) { transform: rotateY(120deg) translateZ(488px);}
+#carousel figure:nth-child(5) { transform: rotateY(160deg) translateZ(488px);}
+#carousel figure:nth-child(6) { transform: rotateY(200deg) translateZ(488px);}
+#carousel figure:nth-child(7) { transform: rotateY(240deg) translateZ(488px);}
+#carousel figure:nth-child(8) { transform: rotateY(280deg) translateZ(488px);}
+#carousel figure:nth-child(9) { transform: rotateY(320deg) translateZ(488px);}
+
+
+
+
+@keyframes rotation{
+	from{
+		transform: rotateY(0deg);
+	}
+	to{
+		transform: rotateY(360deg);
+	}
+}
+
+</style>
+
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" background="img/bg1.png">
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand page-scroll" href="#page-top">Prima pagina</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#despre">Despre</a>
+                    </li>
+					  <li>
+                        <a class="page-scroll" href="#regi">Regi</a>
+                    </li>
+					 <li>
+                        <a class="page-scroll" href="#galerie">Galerie</a>
+                    </li>					              
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+	
+	
+	<section id="intro">
+
+<br>
+<br>
+<br>
+
+<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+  <!-- Overlay -->
+  
+
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#bs-carousel" data-slide-to="1"></li>
+    <li data-target="#bs-carousel" data-slide-to="2"></li>
+  </ol>
+  
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item slides active">
+      <div class="slide-1"></div>
+      <div class="hero">
+        <hgroup>
+            <h1>We are creative</h1>        
+            <h3>Get start your next awesome project</h3>
+        </hgroup>
+        <a class="btn btn-hero page-scroll" href="#150">Click Me to Scroll Down!</a>
+      </div>
+    </div>
+    <div class="item slides">
+      <div class="slide-2"></div>
+      <div class="hero">        
+        <hgroup>
+            <h1>We are smart</h1>        
+            <h3>Get start your next awesome project</h3>
+        </hgroup>       
+        <a class="btn btn-hero page-scroll" href="#150">Click Me to Scroll Down!</a>
+      </div>
+    </div>
+    <div class="item slides">
+      <div class="slide-3"></div>
+      <div class="hero">        
+        <hgroup>
+            <h1>We are amazing</h1>        
+            <h3>Get start your next awesome project</h3>
+        </hgroup>
+        <a class="btn btn-hero page-scroll" href="#150">Click Me to Scroll Down!</a>
+      </div>
+    </div>
+  </div> 
+</div>
+
+
+
+
+
+			
+           
+</section>
+	
+	<br>
+	<br>
+ <section id="150" class="about-section">
+     <h2 style="margin-top:0em;"><center><p>150 de ani de la fondarea Casei Regale și a Statului român modern</p></center></h2>
+        <div class="container">
+
+          <div class="row">
+
+              <div class="col-lg-6" style="padding-right:3em;">
+                <h3>Scurt istoric</h3>
+				<p>În anul 2016 se împlinesc 150 de ani de la sosirea lui Carol I în România, de la întemeierea Dinastiei Regale și de la promulgarea Constituției din 1866.</p>
+
+				<p>Sărbătoarea aduce omagiu întregii națiuni, pentru drumul parcurs în cei mai dificili, dar și cei mai binecuvântați ani din întreaga noastră istorie. Niciodată nu au fost mai multe jertfe omenești și suferință, dar niciodată nu a existat mai mult progres și mai multă dezvoltare, mai multă democrație și mai multă libertate. În toți cei 150 de ani, Coroana a fost, de aproape sau de departe, un far, un simbol, o pavăză, o sursă de inspirație și de mândrie.</p>
+
+				<p>Majestatea Sa Regele își dorește ca această sărbătoare, importantă în istoria țării noastre, să găsească împreună Coroana, instituțiile Statului și pe toți românii.</p>
+
+				<p>Casa Majestății Sale a început organizarea evenimentelor jubiliare începând cu 1 decembrie 2015. Sărbătoririle se vor încheia la 31 decembrie 2016.  Sperăm ca ele să cuprindă o mare parte a societății românești și să atingă multe comunități locale din România și din Republica Moldova.</p>
+											                             
+                         
+          </div>
+
+              <div class="col-lg-6" style="padding-left:3em;">
+                <h3>Scurt istoric</h3>
+                  <p>Lorem Ipsum este pur şi simplu o machetă pentru text a industriei tipografice. Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă pentru literele respective. Nu doar că a supravieţuit timp de cinci secole, dar şi a facut saltul în tipografia electronică practic neschimbată. A fost popularizată în anii '60 odată cu ieşirea colilor Letraset care conţineau pasaje Lorem Ipsum, iar mai recent, prin programele de publicare pentru calculator, ca Aldus PageMaker care includeau versiuni de Lorem Ipsum.</p>
+
+                              <a href="#" class="thumbnail">
+                                  <img src="img/2.jpg" alt="..." style="height:20em; width:100%;">
+                              </a>
+              </div>
+
+          </div>
+
+            <div class="row">
+              <div class="col-lg-12" style="padding-bot:5em;text-align:center;">
+                 <a class="btn btn-default page-scroll" href="#despre" >Click Me to Scroll Down!</a>
+              </div>
+          </div>
+            </div>
+        </div>
+    </section>
+
+	<br>
+	<br>
+ <section id="despre" class="about-section">
+      <div class="container">
+            <div class="row" >
+                <div class="col-lg-12" >
+                    <h1>Despre</h1>
+					
+						<div class="containter">
+											<h1><small class="subtitle" >Ce reprezinta o monarhie?</small></h1>
+										<div class="jumbotron">
+											<p style="text-align:justify;" ><span style="padding-left:2em;">O</span> monarhie constituțională este o formă de guvernământ monarhică ce face parte dintr-un sistem constituțional care acceptă un monarh ereditar sau ales în funcție de șef de stat. Monarhiile constituționale moderne, de obicei implementează conceptul de trias politica, sau "separarea puterilor", unde monarhul e capul ramurei legislative sau doar are un rol simbolic. În cazul în care monarhul deține puterea absolută, aceasta se numește o monarhie absolută.
+										</div>	
+										
+										
+										<div class="jumbotron">
+											<p style="text-align:justify;" ><span style="padding-left:2em;">Astăzi</span> monarhiile constituționale sunt combinate cu o democrație reprezentativă, ce reprezintă teoriile suveranității populare care plasează suveranitatea în mâinele poporului, și cele care consideră important rolul tradiției în guvernământ. Cu toate că regele sau regina pot fi considerați șeful statului, prim Ministrul, a cărui putere provine direct sau indirect în urma alegerilor, este Șeful guvernului.</p>
+										</div>
+											
+						</div>				
+									
+                </div>
+            </div>
+			<br>
+			<br>
+			<br>
+			<div class="row">
+              <div class="col-lg-12" style="padding-bot:5em;text-align:center;">
+                 <a class="btn btn-default page-scroll" href="#about2" >Afla mai multe!</a>
+              </div>
+          </div>
+            </div>			
+			
+        </div>
+
+    </section>
+	
+	<br>
+	<br>
+ <section id="about2" class="about-section">
+      <h1>Monarhia constituțională in Romania</h1>
+	  <br>
+	  <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+						<div class="jumbotron" style="background-color:white;">
+											<p style="text-align:justify;" ><span style="padding-left:2em;">Monarhia</span> constituțională a fost forma de guvernământ a României între 1881 și 1947. În acest interval de timp, țara a fost condusă de patru suverani din familia de Hohenzollern-Sigmaringen. Monarhia a fost abolită la 30 decembrie 1947, în contextul comunizării țării de către Uniunea Sovietică.
+										</div>	
+										
+						<div class="jumbotron" style="background-color:white;">
+											<p style="text-align:justify;" ><span style="padding-left:2em;">Pe</span> fondul instabilității interne care s-a instalat odată cu abdicarea forțată a domnitorului Alexandru Ioan Cuza, abdicare de care a fost responsabilă „monstruoasa coaliție”, a apărut ideea (mai veche de altfel) aducerii unui prinț străin. Sensul politic unei astfel de acțiuni era de a contracara poziția externă potrivnică formării statului român unitar, existentă în rândul imperiilor istorice vecine care erau obișnuite să domine spațiul românesc. Prin punerea în fruntea României a unui reprezentant din dinastiile recunoscute în Europa, se făcea pe placul unora dintre acești puternici potrivnici. Agitația internă a fost urmată și de una externă – unele puteri străine ridicau întrebarea dacă unirea celor două principate române ar mai putea fi recunoscută în continuare. Rusia chiar sprijinea zgomotos tendințele separatiste, organizând manifestații la Iași, la care a participat chiar mitropolitul Moldovei. În consecință, pentru a depăși cât mai repede aceste momente de nesiguranța politică statală, românii au urmat exemplul grecesc și au propus aducerea unui principe străin. În acest sens i s-au făcut propuneri prințului de Flandra, mezinul regelui Leopold I al Belgiei. Acesta însă a refuzat, neavând garanția marilor puteri, astfel că după mai multe discuții interpartinice, s-a hotărât aducerea în țară a prințului Carol de Hohenzollern-Sigmaringen. Astfel, marile puteri ar fi fost puse în fața faptului împlinit, iar unitatea națională ar fi fost păstrată. Totuși, din precauție, planul a fost păstrat secret, până ce noul domn a fost adus în țară, cu sprijinul Franței, simpatizantă a unui stat unitar român, după care a început procesul anevoios de recunoaștere internaționala a domniei lui Carol I.</span> 
+										</div>	
+
+                </div>
+				<div class="row">
+              <div class="col-lg-12" style="padding-bot:5em;text-align:center;">
+                 <a class="btn btn-default page-scroll" href="#regi" >Click Me to Scroll Down!</a>
+              </div>
+          </div>
+            </div>
+        </div>
+
+    </section>
+
+ 
+    
+
+	<br>
+	<br>
+ 
+	
+
+	<section id="regi" class="about-section">
+        
+			<h1>Regi</h1>
+    <div class="container">
+				<br>
+				
+        <div class="row">
+          <div class="col-lg-3 ">
+            <div class="hovereffect">
+                <img class="img-responsive" src="img/carol.jpg" alt="" style="height:30em;">
+            <div class="overlay">
+                <h2>Hover effect 1</h2>
+                  <a class="info" href="#">link here</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 ">
+          <div class="hovereffect">
+              <img class="img-responsive" src="img/ferdinand.jpg" alt="" style="height:30em;">
+          <div class="overlay">
+              <h2>Regele Ferdinand</h2>
+			  <div>
+               <a class="info" href="#">Citeste mai mult</a>
+			   </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-3 ">
+        <div class="hovereffect">
+            <img class="img-responsive" src="img/carol2.jpg" alt="" style="height:30em;">
+        <div class="overlay">
+            <h2>Hover effect 1</h2>
+              <a class="info" href="#">link here</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 ">
+      <div class="hovereffect">
+          <img class="img-responsive" src="img/mihai.jpg" alt="" style="height:30em;">
+      <div class="overlay">
+          <h2>Hover effect 1</h2>
+            <a class="info" href="#">link here</a>
+      </div>
+    </div>
+	
+  </div>
+</div>
+
+<br>
+	 <div class="row">
+              <div class="col-lg-12" style="padding-bot:5em;text-align:center;">
+                 <a class="btn btn-default page-scroll" href="#galerie" >Click Me to Scroll Down!</a>
+              </div>
+          </div>
+    </section>    
+	<br>
+	<br>
+	<br>
+       
+
+	   <section id="galerie" class="about-section" style="background-color:white;">
+			
+                  <h1>Galerie</h1>     
+			
+				
+    <h1 class="heading">3d images gallery</h1>
+ <div class="container1" >
+        <div id="carousel">
+			<figure><div class="hovereffect">
+                <img class="img-responsive" src="img/mihai.jpg" alt="" style="height:30em;">
+            <div class="overlay">
+                <h2>Hover effect 1</h2>
+                  <a class="info" href="#">link here</a>
+            </div>
+          </div></figure>
+		  
+		  
+			<figure><div class="hovereffect">
+                <img class="img-responsive" src="img/carol.jpg" alt="" style="height:30em;">
+            <div class="overlay">
+                <h2>Hover effect 1</h2>
+                  <a class="info" href="#">link here</a>
+            </div>
+          </div></figure>
+		  
+		  
+			<figure><div class="hovereffect">
+                <img class="img-responsive" src="img/1.png" alt="" style="height:30em;">
+            <div class="overlay">
+                <h2>Hover effect 1</h2>
+                  <a class="info" href="#">link here</a>
+            </div>
+          </div></figure>
+		  
+		  
+			<figure><div class="hovereffect">
+                <img class="img-responsive" src="img/2.jpg" alt="" style="height:30em;">
+            <div class="overlay">
+                <h2>Hover effect 1</h2>
+                  <a class="info" href="#">link here</a>
+            </div>
+          </div></figure>
+		  
+		  
+			<figure><div class="hovereffect">
+                <img class="img-responsive" src="img/carol2.jpg" alt="" style="height:30em;">
+            <div class="overlay">
+                <h2>Hover effect 1</h2>
+                  <a class="info" href="#">link here</a>
+            </div>
+          </div></figure>
+		  
+		  
+			<figure><div class="hovereffect">
+                <img class="img-responsive" src="img/carol10.jpg" alt="" style="height:30em;">
+            <div class="overlay">
+                <h2>Hover effect 1</h2>
+                  <a class="info" href="#">link here</a>
+            </div>
+          </div></figure>
+		  
+		  
+			<figure><div class="hovereffect">
+                <img class="img-responsive" src="img/ferdinand.jpg" alt="" style="height:30em;">
+            <div class="overlay">
+                <h2>Hover effect 1</h2>
+                  <a class="info" href="#">link here</a>
+            </div>
+          </div></figure>
+		  
+		  
+			<figure><div class="hovereffect">
+                <img class="img-responsive" src="img/carol11.jpg" alt="" style="height:30em;">
+            <div class="overlay">
+                <h2>Hover effect 1</h2>
+                  <a class="info" href="#">link here</a>
+            </div>
+          </div></figure>
+		  
+		  
+			<figure><div class="hovereffect">
+                <img class="img-responsive" src="img/3.jpg" alt="" style="height:30em;">
+            <div class="overlay">
+                <h2>Hover effect 1</h2>
+                  <a class="info" href="#">link here</a>
+            </div>
+          </div></figure>
+			
+			
+		</div>
+		
+	</div>
+	<div class="row">
+              <div class="col-lg-12" style="padding-bot:5em;text-align:center;">
+                 <a class="btn btn-default page-scroll" href="#contact" >Click Me to Scroll Down!</a>
+              </div>
+          </div>
+    </section>    
+	<br>
+	<br>
+	<section id="contact" class="about-section" ">
+			 <div class="container" style="text-align:center;">
+				
+				<h1>Contact Form</h1>
+				<br>
+				
+							<form class="form-horizontal" role="form" method="post" action="index.php" style="width:60%; margin:auto; padding-right:5em;">
+							
+									<div class="form-group">
+										<label for="name" class="col-sm-2 control-label">Name</label>
+										<div class="col-sm-10">
+											<input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name">
+											
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="email" class="col-sm-2 control-label">Email</label>
+										<div class="col-sm-10">
+											<input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com">
+											
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="message" class="col-sm-2 control-label">Message</label>
+										<div class="col-sm-10">
+											<textarea class="form-control" rows="4" name="message"></textarea>
+											
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
+										<div class="col-sm-10">
+											<input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
+											
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-sm-10 col-sm-offset-2">
+											<input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-sm-10 col-sm-offset-2">
+											<?php echo $result; ?>	
+										</div>
+									</div>
+									
+							</form> 
+							<div class="row">
+              <div class="col-lg-12" style="padding-bot:5em;text-align:center;">
+                 <a class="btn btn-default page-scroll" href="#intro" >Click Me to Scroll Up!</a>
+              </div>
+          </div>
+				
+    </section>   
+	
+	
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+
+</body>
+
+</html>

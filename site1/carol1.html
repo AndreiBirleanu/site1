@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Regele Carol I</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+	
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<style>
+/* Carousel */
+
+#quote-carousel {
+    padding: 0 10px 30px 10px;
+    margin-top: 30px;
+    /* Control buttons  */
+    /* Previous button  */
+    /* Next button  */
+    /* Changes the position of the indicators */
+    /* Changes the color of the indicators */
+}
+#quote-carousel .carousel-control {
+    background: none;
+    color: #CACACA;
+    font-size: 2.3em;
+    text-shadow: none;
+    margin-top: 30px;
+}
+#quote-carousel .carousel-control.left {
+    left: -60px;
+}
+#quote-carousel .carousel-control.right {
+    right: -60px;
+}
+#quote-carousel .carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: 0px;
+    margin-right: -19px;
+}
+#quote-carousel .carousel-indicators li {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+    border: 4px solid #CCC;
+    border-radius: 50px;
+    opacity: 0.4;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+#quote-carousel .carousel-indicators .active {
+    background: #333333;
+    width: 128px;
+    height: 128px;
+    border-radius: 100px;
+    border-color: #f33;
+    opacity: 1;
+    overflow: hidden;
+}
+.carousel-inner {
+    min-height: 300px;
+}
+.item blockquote {
+    border-left: none;
+    margin: 0;
+}
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+
+
+
+.list-group>li:hover{background-color:lightblue;};
+
+
+
+
+/* Makes images fully responsive */
+
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ------------------- Carousel Styling ------------------- */
+
+.carousel-inner {
+  border-radius: 15px;
+}
+
+.carousel-caption {
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  padding: 0 0 10px 25px;
+  color: #fff;
+  text-align: left;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 15;
+  margin: 0;
+  padding: 0 25px 25px 0;
+  text-align: right;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+}
+
+
+/* ------------------- Section Styling - Not needed for carousel styling ------------------- */
+
+.section-white {
+   padding: 10px 0;
+}
+
+.section-white {
+  background-color: #fff;
+  color: #555;
+}
+
+@media screen and (min-width: 768px) {
+
+  .section-white {
+     padding: 1.5em 0;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+
+  .container {
+    max-width: 930px;
+  }
+
+}
+
+
+
+
+
+
+
+
+/***
+Bootstrap Line Tabs by @keenthemes
+A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+Licensed under MIT
+***/
+
+.content {
+	padding: 30px;
+	background: #f1f3fa;
+}
+
+.margin-bottom-30 {
+	margin-bottom: 30px;
+}
+
+/* Portlet */
+.portlet {
+	background: #fff;
+	padding: 20px;
+}
+
+.portlet.portlet-gray {
+	background: #f7f7f7;
+}
+
+.portlet.portlet-bordered {
+	border: 1px solid #eee;
+}
+
+/* Portlet Title */
+.portlet-title {
+	padding: 0;
+  	min-height: 40px;
+  	border-bottom: 1px solid #eee;
+  	margin-bottom: 18px;
+}
+
+.caption {
+	float: left;
+	display: inline-block;
+	font-size: 18px;
+	line-height: 18px;
+}
+
+.caption.caption-green .caption-subject,
+.caption.caption-green i {
+	color: #4db3a2;
+	font-weight: 200;
+}
+
+.caption.caption-red .caption-subject,
+.caption.caption-red i {
+	color: #e26a6a;
+	font-weight: 200;
+}
+
+.caption.caption-purple .caption-subject,
+.caption.caption-purple i {
+	color: #8775a7;
+	font-weight: 400;
+}
+
+.caption i {
+	color: #777;
+	font-size: 15px;
+	font-weight: 300;
+	margin-top: 3px;
+}
+
+.caption-subject {
+	color: #666;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.caption-helper {
+	padding: 0;
+	margin: 0;
+	line-height: 13px;
+	color: #9eacb4;
+	font-size: 13px;
+	font-weight: 400;
+}
+
+/* Actions */
+.actions {
+	float: right;
+  	display: inline-block;
+}
+
+.actions a {
+	margin-left: 3px;
+}
+
+.actions .btn {
+	color: #666;
+	padding: 3px 9px;
+	font-size: 13px;
+  	line-height: 1.5;
+  	background-color: #fff;
+  	border-color: #ccc;
+  	border-radius: 50px;
+}
+
+.actions .btn i {
+	font-size: 12px;
+}
+
+.actions .btn:hover {
+	background: #f2f2f2;
+}
+
+/* Pagination */
+.pagination {
+	margin: -3px 0 0;
+	border-radius: 50px;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+	padding: 4px 10px;
+	font-size: 12px;
+	color: #8775a7;
+	background: #f7f7f7;
+}
+
+.pagination > li:hover > a,
+.pagination > li.active > a,
+.pagination > li.active:hover > a {
+	color: #fff;
+	background: #8775a7;
+	border-color: #8775a7;
+}
+
+/* Inputs */
+.inputs {
+	float: right;
+	display: inline-block;
+	padding: 4px 0;
+	margin-top: -10px;
+}
+
+.input-inline {
+	width: 240px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* Tab */
+.portlet-title > .nav-tabs {
+	background: none;
+	margin: 0;
+	float: right;
+	display: inline-block;
+	border: 0;
+}
+
+.portlet-title > .nav-tabs > li {
+	background: none;
+	margin: 0;
+	border: 0;
+}
+
+.portlet-title > .nav-tabs > li > a {
+	background: none;
+	border: 0;
+	padding: 2px 10px 13px;
+	color: #444;
+}
+
+.portlet-title > .nav-tabs > li.active,
+.portlet-title > .nav-tabs > li.active:hover {
+  	border-bottom: 4px solid #f3565d;
+  	position: relative;
+  }
+
+  .portlet-title > .nav-tabs > li:hover {
+  	border-bottom: 4px solid #f29b9f;
+  }
+
+.portlet-title > .nav-tabs > li.active > a,
+.portlet-title > .nav-tabs > li:hover > a {
+	color: #333;
+	background: #fff;
+	border: 0;
+}
+
+
+</style>
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar" data-offset="60" background="img/bg1.png">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a style="padding-top:2px;" class="navbar-brand page-scroll" href="#page-top"><img style ="width:40px;" src="img/1.png"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><a class="page-scroll" href="#about">DESPRE</a></li>
+		
+		<li><a class="page-scroll" href="#stiaica">ȘTIAȚI CĂ?</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+	
+	
+	<br>
+	<br>
+	<br>
+	
+	
+
+<!-------- don't use this html this only for margin top remove this ---------------------->
+ <section class="section-white" id="intro">
+
+<br><br><br>
+<center><h1 style="font-family:Monotype Corsiva;font-size:50px;"><hr>Regele Carol I</h1>
+<hr>
+</center>
+
+<br>
+<br>
+
+ <div class="container">
+
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" style="-webkit-box-shadow: 10px 10px 25px 6px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 25px 6px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 25px 6px rgba(0,0,0,0.75);">
+        <div class="item active">
+          <img style="height:400px;" src="img/carol1bg.jpg" alt="...">
+          <div class="carousel-caption">
+            <h2>Carol I</h2>
+          </div>
+        </div>
+        <div class="item">
+          <img style="height:400px; width:100%;"src="img/carol12.png" alt="...">
+          <div class="carousel-caption">
+            <h2>Heading</h2>
+          </div>
+        </div>
+        <div class="item">
+          <img src="http://placehold.it/800x400" alt="...">
+          <div class="carousel-caption">
+            <h2>Heading</h2>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+
+  </div>
+  <br>
+  <br>
+  <hr>
+ 
+	<center><a class="btn btn-default btn-lg page-scroll" role="button" href="#about">Derulează</a><center>
+</section>
+    
+	<br>
+	<br>
+
+ <section id="about" class="despre1">
+     
+        
+		<div class="col-md-7">
+		<br>
+		<center><h1>Despre</h1></center>
+		<hr>
+		<br>
+		<br>
+		<br>
+		<br>
+				<!-- BEGIN Portlet PORTLET-->
+				<div class="portlet">
+					<div class="portlet-title">
+						<div class="caption caption-red">
+							<i class="glyphicon glyphicon-pushpin"></i>
+							
+						</div>
+						<ul class="nav nav-tabs">
+							<li >
+								<a href="#portlet_tab3" data-toggle="tab">
+								Date personale</a>
+							</li>
+							<li>
+								<a href="#portlet_tab2" data-toggle="tab">
+								Politică externă </a>
+							</li>
+							<li class="active">
+								<a href="#portlet_tab1" data-toggle="tab">
+								Politică internă</a>
+							</li>
+						</ul>
+					</div>
+					<div class="portlet-body">
+						<div class="tab-content">
+							<div class="tab-pane active" id="portlet_tab1">
+								<h4>Politică internă</h4>
+								<div class="list-group">
+								
+  <a  class="list-group-item">11 februarie 1866 are loc lovitura de stat prin care A.L.I. Cuza a fost silit să abdice. Se formează o Locotenenţă domnească alcătuită din general Nicolae Golescu, Lascăr Catargiu şi colonel Nicolae Haralambie. </a>
+  <a  class="list-group-item">În perioada 2-6 aprilie s-a organizat <span  title="Consultare prealabilă a cetățenilor, care urmează să se pronunțe prin „da” sau „nu” asupra unui proiect de lege sau a unui act de stat de o importanță deosebită"><u>plebiscitul</u></span>  pentru alegerea principelui Carol de Hohenzollern-Sigmaringen ca Domn al României, sub numele de Carol I.</a>
+  <a  class="list-group-item">În perioada 9-17 aprilie 1866 au loc alegerile pentru Adunarea Electivă , devenită Adunare Constituantă. Adunarea Constituantă îl proclamă pe principele Carol de Hohenzollern-Sigmaringen Domn sub numele de Carol I. </a><br>
+ <a  class="list-group-item">La 10 mai 1866, în faţa Adunării Constituante, Carol I depune jurământul pe legile ţării. Adunarea Constituantă votează legea pentru naturalizarea familiei <span  title="Care aparține unui principe, privitor la un principe, de principe. ♦ Fig. Măreț; bogat, îmbelșugat; somptuos. "><u>princiare</u></span> de Hohenzollern. 
+Se formează guvernul de coaliție condus de Lascăr Catargiu,  având orientare conservatoare şi liberal radicală. Scopul său declarat era să acţioneze « pentru a asigura drepturile noastre şi pentru a susţine pe alesul nostru Carol I », pentru « dezvoltarea şi întărirea libertăţilor publice şi a guvernului constituţional.
+</a>
+  <a  class="list-group-item">La 15 iulie își începe activitatea guvernul Ion Ghica. Acest guvern era chemat să continue tratativele cu Poarta otomană pentru recunoaşterea lui Carol I ca Domn al României. 
+Sunt adoptate : legea pentru fixarea listei civile a Domnului Carol I ; Legea electorală ce stabileşte sistemul de vot <span  title="Sistem (electoral) cenzitar = sistem electoral în care recunoașterea dreptului de vot este în funcție de îndeplinirea de către alegători a anumitor condiții, în primul rând în funcție de avere."><u>cenzitar</u></span> (luînd drept criteriu averea) şi capacitar (luând drept criteriu instrucţia). Corpul electoral este împărţit în patru colegii pentru Adunarea Deputaţilor şi două pentru Senat. Vârsta minimă a alegătorilor este fixată la 21 de ani împliniţi. 
+</a>
+  <a  class="list-group-item"> La 24 mai 1875 se constituie Partidul National Liberal, avîndu-l ca preşedinte pe Ion C. Brătianu. La 10 august 1875 Carol l pune piatra de temelie a Castelului Peleş. </a><br>
+ <a  class="list-group-item">La 24 iulie 1877 s-a format guvernul Ion C. Brătianu. Este un guvern liberal puternic, care conduce ţara în timpul războiului de independenţă. </a>
+  <a  class="list-group-item">La 3 februarie 1880 se constituie Partidul Conservator, avîndu-l ca preşedinte pe Manolache Costache Epureanu. </a>
+  <a  class="list-group-item">La 9 iunie 1884 este adoptată lege electorală. Aceasta menține sistemul cenzitar și capacitar. Adunarea deputaților este împărțită în trei colegii iar Senatul în două colegii. La 10 iunie este adoptată legea de creare a Domeniuiui Coronei.</a><br>
+ <a  class="list-group-item">La 23 martie se constituie guvernul Theodor Rosetti din rândul grupării iunimiste. Guvernul Rosetti este rezultatul unui compromis între gruparea iunimistă şi Partidui Liberai-Conservator.</a>
+  <a  class="list-group-item">În septembrie 1895 este inaugurat podului de la Cernavodă, care va purta numele Regelui Carol I iar în luna octombrie același an Dimitrie A. Sturdza revine la putere după o îndelungată opoziţie.  </a>
+  <a  class="list-group-item"> La 10 mai 1906 se instituie ordinul Carol I. iar la 6 iunie este inaugurată expozitia generală română, organizată în cinstea a patruzeci de ani de domnie ai lui Carol I. </a>
+  <a  class="list-group-item">La 23 martie 1912 se instalează guvernul Titu Maiorescu un guvern de destindere », format după o perioadă de încrîncenare politică între grupările din sânul Partidului Conservator. La 14 octombrie același an se constituie un nou guvern Titu Maiorescu format de Partidul Conservator şi Partidul Conservator-Democrat. </a>
+
+</div>
+							</div>
+							<div class="tab-pane" id="portlet_tab2">
+								<h4>Politică externă</h4>
+								<div class="list-group">
+  <a  class="list-group-item">La 12 octombrie 1866 Carol I primeşte <span  title="Ordin emis de un sultan prin care de obicei erau numiți sau maziliți guvernatorii și domnitorii din provinciile imperiului otoman."><u>firmanul</u></span> de numire din partea sultanului.</a>
+  <a  class="list-group-item">La 2 aprilie 1877 Domnul Carol I îşi dă acordul pentru convocarea Consiliului de Coroană, care să se pronunţe asupra politicii externe a ţării. Convenţia dintre România şi Rusia privind libera trecere a armatelor ruse pe teritoriul României a fost semnată la 4 aprilie 1877. Guvernul rus se obligă să respecte drepturile politice ale statului român,  precum şi a menţine si apăra integritatea actuală a României . </a>
+  <a  class="list-group-item">La 9 mai 1877 a fost proclamată independenţa României iar la 10 mai se  instituie definitiv ordinul Steaua României. Carol I, aflat la Calafat, ordonă la 15 mai deschiderea focului asupra trupelor otomane de la Vidin pentru ca la 16 august 1877 Domnului Carol I să i se încredinţeze comanda supremă a forţelor romano-ruse din zona Plevnei. </a><br>
+  <a  class="list-group-item">La 1 iulie 1878 se semnează tratatul de pace de la Berlin, în urma războiului ruso-româno-turc. La 9 septembrie 1878 Consiliul de Miniştri decide ca Domnul Carol I să poarte titlul de Alteţă Regală. </a>
+  <a  class="list-group-item">Din 14 februarie 1879 intră în vigoare legea prin care misiunile diplomatice ale României sunt ridicate la rangul de legaţii iar la 13 octombrie 1879 guvernul Ion C. Brătianu îşi propune ca obiectiv să se conformeze prevederilor tratatului de la Berlin şi să revizuiască articolul 7 din Constituţie. Legea de revizuire a articolului 7 din Constituţie consfinţeşte faptul că « diferenţa de credinţe religioase şi confesiuni nu constituie în România o piedică spre a dobândi drepturile civile şi politice şi a le exercita .</a>
+  <a  class="list-group-item">În perioada 15-18 septembrie 1896 are loc vizita lui Franz Joseph, împăratul Austro-Ungariei, în România. Vizita urmăreşte întărirea relaţiilor cu România, relaţii afectate de reprimarea mişcării memorandiştilor.</a><br>
+ <a  class="list-group-item">În perioada 16-19 iulie 1898 are loc vizita Regelui Carol I în Rusia, marcând o evoluţie pozitivă a relaţiilor dintre cele două ţări.</a>
+  <a  class="list-group-item">Regele Carol I, însoţit de principele moştenitor Ferdinand, întreprinde o vizită în Bulgaria în luna octombrie 1902 cu prilejul aniversării a douăzeci şi cinci de ani de la cucerirea Plevnei.</a>
+  <a  class="list-group-item">În perioada 26-29 noiembrie 1912 are loc vizita marelui duce Nicolae Mihailovici în România. Cu acest prilej, i se înmînează Regelui Carol I bastonul de feldmareşal al armatei ruse. </a><br>
+ 
+</div>
+							</div>
+							<div class="tab-pane" id="portlet_tab3">
+								<h4>Date personale</h4>
+								<div class="list-group">
+  <a  class="list-group-item">La 3 noiembrie 1869 are loc căsătoria lui Carol I cu Elisabeta de Wied.  </a>
+  <a  class="list-group-item">La 25 septembrie 1883 are loc inaugurarea oficială a Castelului Peleş. </a>
+  <a  class="list-group-item">În 1890 Principele moştenitor Ferdinand este desemnat membru de onoare al Academiei Române.  </a><br>
+  <a  class="list-group-item">La 22 decembrie 1892 s-a adoptat legea referitoare la înaintarea în diferite grade a membrilor Familiei regale care fac serviciul în armată, iar la 29 decembrie același an are loc căsătoria principelui moştenitor Ferdinand cu Maria, principesă de Marea Britanie.<a><br> 
+<a  class="list-group-item">La 31 decembrie este votată legea pentru constituirea dotaţiei anuale a principelui moştenitor Ferdinand. </a>
+  <a  class="list-group-item">La 5 august 1903 se naşte principele Nicolae, fiul principilor moştenitori Ferdinand Şi Maria.  </a>
+  <a  class="list-group-item">În 1890 Principele moştenitor Ferdinand este desemnat membru de onoare al Academiei Române.  </a><br>
+  <a  class="list-group-item">La 23 decembrie același an se naşte principesa Ileana, fiica principilor moştenitori Ferdinand şi Maria. </a>
+  <a  class="list-group-item">21 decembrie 1912 se naște principele Mircea, ultimul copil al principilor moştenitori Ferdinand şi Maria.   </a>
+ 
+</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<!-- END Portlet PORTLET-->
+			</div>
+	</div>
+<div class="col-md-2"></div>
+<div class="col-md-3">
+	 
+	<br>
+	<br>
+    <div class="row">
+		
+        
+        
+        	<div class="well">
+        		<center><h1 class="text-info">Carol I</h1></center>
+				<hr>
+				<center><img src="img/carol.jpg"></center>
+        		<hr>
+        		<p><strong>Domnie:    </strong>aprilie 1866 – 27 septembrie/10 octombrie 1914</p>
+        		<hr>
+				
+        		<p><strong>Căsatorit cu:  </strong>Regina Elisabeta</p>
+        		<hr>
+				
+        		<p><strong>Nume complet: </strong>Karl Eitel Friedrich Zephyrinus Ludwig von Hohenzollern - Sigmaringen</p>
+        		<hr>
+				
+        		<p><strong>Naștere:    </strong>20 aprilie 1839 Sigmaringen</p>
+        		<hr>
+        		
+        		<p><strong>Deces:    </strong>10 octombrie 1914 (75 de ani) Sinaia, România</p>
+        		<hr>
+				<p><strong>Familie:    </strong><br>
+Tată: Prințul Karl Anton de Hohenzollern-Sigmaringen
+<br>Mamă:
+Prințesa Josephine Friederike Luise de Baden</p>
+        		<hr>
+             
+        	</div>
+       
+</div>
+	</div>
+	
+	
+          <div class="row">
+              <div class="col-lg-12" style="padding-bot:5em;text-align:center;">
+                 <a class="btn btn-default page-scroll" href="#stiaica" ><img class="img-responsive" src="img/down.png" alt="" style="height:20px;"></a>
+              </div>
+          </div>
+
+    </section>
+
+
+ 
+    
+
+	
+       
+	
+ 
+    
+	<br>
+	<br>
+	<section id="stiaica" class="istoric">
+	
+	
+	
+<div class="container" style="height:500px">
+<div class="row">
+                    <div class="col-md-12" data-wow-delay="0.2s">
+                        <div class="carousel slide" data-ride="carousel" id="quote-carousel" style="height:450px">
+                            <!-- Bottom Carousel Indicators -->
+                            <ol class="carousel-indicators" style="padding-right:320px;">
+                                <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="img/semn.jpg" style= alt="">
+                                </li>
+                                <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="img/semn.jpg" alt="">
+                                </li>
+                                <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="img/semn.jpg" alt="">
+
+                            </ol>
+
+                            <!-- Carousel Slides / Quotes -->
+                            <div class="carousel-inner text-center">
+
+                                <!-- Quote 1 -->
+                                <div class="item active">
+                                    <blockquote>
+                                        <div class="row">
+                                            <div class="col-sm-8 col-sm-offset-2">
+												<h1>Știați că...?</h1>
+												<br>
+                                                <p>Anul acesta se împlinesc 103 ani de la moartea lui Carol I</p>
+                                                
+                                            </div>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                                <!-- Quote 2 -->
+                                <div class="item">
+                                    <blockquote>
+                                        <div class="row">
+                                            <div class="col-sm-8 col-sm-offset-2">
+<h1>Știați că...?</h1>
+												<br>
+                                                <p> Trei sferturi din căile ferate din România datează de pe vremea lui Carol I</p>
+                                                
+                                            </div>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                                <!-- Quote 3 -->
+                                <div class="item">
+                                    <blockquote>
+                                        <div class="row">
+                                            <div class="col-sm-8 col-sm-offset-2">
+				<h1>Știați că...?</h1>
+												<br>
+                                                <p>Calea Victoriei a avut încă din 1878, sens unic de mers. Acesta a fost dat de intrarea triumfală a trupelor române pe fostul Pod al Mogoşoaiei, dinspre Piaţa Victoriei spre Palatul Regal, unde armata a fost aşteptată de către regele Carol I.</p>
+                                               
+                                            </div>
+                                        </div>
+                                    </blockquote>
+                                </div>
+                           
+						
+                            </div>
+ </div>
+  </div>
+                            <!-- Carousel Buttons Next/Prev -->
+                            <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+                            <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+</div>
+
+<div class="row">
+              <div class="col-lg-12" style="padding-bot:5em;text-align:center;">
+			     <a class="btn btn-default page-scroll" href="#page-top" >Înapoi sus</a>
+                 <a class="btn btn-default page-scroll" onclick="goBack()">Înapoi la site</a>
+				 
+              </div>
+          </div>
+    </section>
+
+	<section id="footer" class="footer">
+	
+	
+	
+	<hr>
+	<center><small>&copy; Site realizat de Bîrleanu Andrei-Cristian</small></center>
+	<hr>
+	
+	</section>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	<script>
+function goBack() {
+    window.history.back();
+}
+
+
+
+
+
+
+
+$(document).ready( function() {
+    $('#myCarousel').carousel({
+    	interval:   4000
+	});
+	
+	var clickEvent = false;
+	$('#myCarousel').on('click', '.nav a', function() {
+			clickEvent = true;
+			$('.nav li').removeClass('active');
+			$(this).parent().addClass('active');		
+	}).on('slid.bs.carousel', function(e) {
+		if(!clickEvent) {
+			var count = $('.nav').children().length -1;
+			var current = $('.nav li.active');
+			current.removeClass('active').next().addClass('active');
+			var id = parseInt(current.data('slide-to'));
+			if(count == id) {
+				$('.nav li').first().addClass('active');	
+			}
+		}
+		clickEvent = false;
+	});
+});
+</script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+
+	
+	
+</body>
+
+</html>
+
